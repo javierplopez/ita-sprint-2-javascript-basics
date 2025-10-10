@@ -10,15 +10,40 @@
 
 /* Variables CSS para consistencia */
 :root {
+    /* Colores principales */
     --primary-color: #f7df1e; /* Amarillo JavaScript */
     --secondary-color: #323330; /* Gris oscuro JavaScript */
     --text-dark: #2c2c2c;
     --text-light: #666;
     --background: #f8f9fa;
     --white: #ffffff;
+    
+    /* Colores para terminal/código - Mejorados para accesibilidad */
+    --terminal-bg: #1e1e1e; /* Fondo terminal oscuro */
+    --terminal-text: #e4e4e4; /* Texto terminal - Mejorado contraste */
+    --terminal-border: #505050; /* Borde terminal - Mejorado contraste */
+    --code-keyword: #6ba7f3; /* Palabras clave JS - Mejorado contraste */
+    --code-string: #d19a66; /* Strings - Mejorado contraste */
+    --code-function: #e6db74; /* Nombres de función - Mejorado contraste */
+    --code-comment: #7c9a65; /* Comentarios - Mejorado contraste */
+    --code-number: #c5d89b; /* Números - Mejorado contraste */
+    
+    /* Botones */
+    --button-bg: linear-gradient(135deg, var(--primary-color) 0%, #f0d000 100%);
+    --button-hover-bg: linear-gradient(135deg, #f0d000 0%, var(--primary-color) 100%);
+    --button-text: var(--secondary-color);
+    --button-shadow: 0 4px 15px rgba(247, 223, 30, 0.3);
+    --button-hover-shadow: 0 6px 20px rgba(247, 223, 30, 0.4);
+    
+    /* Espaciado y efectos */
     --border-radius: 8px;
     --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
 }
 
 /* Estilos generales */
@@ -34,6 +59,19 @@ body {
     padding: 2rem 1rem;
 }
 
+/* Clase para ocultar elementos visualmente pero mantenerlos accesibles para lectores de pantalla */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
 /* Header con logo y título */
 .header-title {
     display: flex;
@@ -44,11 +82,35 @@ body {
     flex-wrap: wrap;
 }
 
+.logo-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: var(--transition);
+    padding: var(--spacing-xs);
+}
+
+.logo-link:hover {
+    background: rgba(247, 223, 30, 0.1);
+    transform: scale(1.1);
+}
+
+.logo-link:active {
+    transform: scale(0.95);
+}
+
 .js-logo {
     width: 60px;
     height: 60px;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
     animation: logoFloat 3s ease-in-out infinite;
+    transition: var(--transition);
+}
+
+.logo-link:hover .js-logo {
+    filter: drop-shadow(0 4px 8px rgba(247, 223, 30, 0.4));
 }
 
 @keyframes logoFloat {
@@ -169,6 +231,10 @@ nav a:hover::after {
         gap: 0.8rem;
     }
     
+    .logo-link {
+        padding: 4px;
+    }
+    
     .js-logo {
         width: 50px;
         height: 50px;
@@ -195,6 +261,10 @@ nav a:hover::after {
         text-align: center;
     }
     
+    .logo-link {
+        padding: 2px;
+    }
+    
     .js-logo {
         width: 45px;
         height: 45px;
@@ -211,5 +281,294 @@ nav a:hover::after {
     nav a {
         padding: 0.7rem 1rem;
         font-size: 0.9rem;
+    }
+}
+
+/* Estilos para páginas de ejercicios */
+main {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Asegurar centrado para la página principal */
+main nav {
+    max-width: 600px;
+    width: 100%;
+}
+
+article {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Aviso importante para la consola */
+.console-notice {
+    background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+    color: #856404;
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px rgba(133, 100, 4, 0.15);
+    margin-bottom: var(--spacing-lg);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #ffd93d;
+    border-left: 4px solid #f39c12;
+}
+
+.console-notice::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 217, 61, 0.2), transparent);
+    animation: shimmer 4s infinite;
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+.console-notice p {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xs);
+}
+
+.console-notice:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(133, 100, 4, 0.25);
+    border-color: #f39c12;
+    transition: var(--transition);
+}
+
+/* Estilos para simular terminal/código */
+pre {
+    background: var(--terminal-bg);
+    border: 2px solid var(--terminal-border);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    margin: var(--spacing-md) 0;
+    position: relative;
+    overflow-x: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Simulación de barra de terminal */
+pre::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 25px;
+    background: linear-gradient(135deg, #3c3c3c 0%, #2a2a2a 100%);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    border-bottom: 1px solid var(--terminal-border);
+}
+
+/* Botones de terminal (rojo, amarillo, verde) */
+pre::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    width: 12px;
+    height: 12px;
+    background: #ff5f56;
+    border-radius: 50%;
+    box-shadow: 
+        20px 0 0 #ffbd2e,
+        40px 0 0 #27ca3f;
+}
+
+.javascript-code {
+    display: block;
+    color: var(--terminal-text);
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-top: 25px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Destacar sintaxis JavaScript */
+.javascript-code .keyword {
+    color: var(--code-keyword);
+    font-weight: 600;
+}
+
+.javascript-code .string {
+    color: var(--code-string);
+}
+
+.javascript-code .function {
+    color: var(--code-function);
+}
+
+.javascript-code .comment {
+    color: var(--code-comment);
+    font-style: italic;
+}
+
+.javascript-code .number {
+    color: var(--code-number);
+}
+
+/* Mejorar accesibilidad del código */
+.javascript-code:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+    background: var(--terminal-bg);
+}
+
+/* Focus mejorado para navegación por teclado */
+*:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Focus específico para enlaces */
+a:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 3px;
+}
+
+/* Estilos para botones */
+button {
+    background: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--border-radius);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--button-shadow);
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: var(--spacing-md);
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+button:hover {
+    background: var(--button-hover-bg);
+    box-shadow: var(--button-hover-shadow);
+    transform: translateY(-2px);
+}
+
+button:hover::before {
+    left: 100%;
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: var(--button-shadow);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: var(--button-hover-shadow), 0 0 0 3px rgba(247, 223, 30, 0.3);
+}
+
+/* Títulos de ejercicios */
+h2 {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-md);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: var(--spacing-xs);
+    display: inline-block;
+}
+
+h3 {
+    color: var(--text-dark);
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 500;
+}
+
+/* Responsive para ejercicios */
+@media (max-width: 768px) {
+    main {
+        padding: var(--spacing-sm);
+    }
+    
+    article {
+        padding: var(--spacing-md);
+    }
+    
+    .javascript-code {
+        font-size: 12px;
+    }
+    
+    button {
+        width: 100%;
+        padding: var(--spacing-md);
+    }
+    
+    .console-notice {
+        padding: var(--spacing-sm) var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .console-notice p {
+        font-size: 1rem;
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+}
+
+@media (max-width: 480px) {
+    pre {
+        padding: var(--spacing-sm);
+    }
+    
+    .javascript-code {
+        font-size: 11px;
+        margin-top: 20px;
+    }
+    
+    pre::after {
+        width: 8px;
+        height: 8px;
+        top: 6px;
+        left: 8px;
+        box-shadow: 
+            15px 0 0 #ffbd2e,
+            30px 0 0 #27ca3f;
     }
 }
