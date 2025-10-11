@@ -46,6 +46,34 @@
                 Run Exercise 1
             </button>
         </article>
+
+        <article>
+            <h2 id="exercise-2-title">Exercise 2</h2>
+            <section aria-labelledby="function2-section">
+                <h3 id="function2-section">Function:</h3>
+                <pre role="img" aria-label="JavaScript code showing arrow function definition">
+                    <code class="javascript-code" tabindex="0">
+                        const randomNumber = () => Math.floor(Math.random() * 101);
+                    </code>
+                </pre>
+            </section>
+            <section aria-labelledby="usage2-section">
+                <h3 id="usage2-section">Example of usage:</h3>
+                <pre role="img" aria-label="JavaScript code showing function usage and console output">
+                    <code class="javascript-code" tabindex="0">
+                        const number = randomNumber();
+                        console.log(number); // Random number between 0 and 100
+                    </code>
+                </pre>
+            </section>
+            <button 
+                id="run-exercise-2-btn" 
+                type="button"
+                aria-describedby="console-notice"
+                aria-label="Execute the arrow function exercise and display results in browser console">
+                Run Exercise 2
+            </button>
+        </article>
     </main>
     <script src="01-arrow-functions.js"></script>
 </body>
