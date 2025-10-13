@@ -1,57 +1,57 @@
 // Exercise 1
-let nombres = ['Anna', 'Bernat', 'Clara'];
+let names = ['Anna', 'Bernat', 'Clara'];
 
 // HTML part to test
 const exercise1Test = document.getElementById('run-exercise-1-btn');
 exercise1Test.addEventListener('click', () => {
     
-    nombres.forEach(nombre => console.log(nombre));
+    names.forEach(name => console.log(name));
 });
 
 // Exercise 2
-let noms = ['Anna', 'Bernat', 'Clara'];
+let namesLoop = ['Anna', 'Bernat', 'Clara'];
 
 // HTML part to test
 const exercise2Test = document.getElementById('run-exercise-2-btn');
 exercise2Test.addEventListener('click', () => {
     
-    for (const nom of noms) {
-        console.log(nom);
+    for (const name of namesLoop) {
+        console.log(name);
     }
 });
 
 // Exercise 3
-let numeros = [1, 2, 3, 4, 5, 6];
-let pares = numeros.filter(num => num % 2 === 0);
+let numbers = [1, 2, 3, 4, 5, 6];
+let evens = numbers.filter(num => num % 2 === 0);
 
 // HTML part to test
 const exercise3Test = document.getElementById('run-exercise-3-btn');
 exercise3Test.addEventListener('click', () => {
     
-    console.log('Array original:', numeros);
-    console.log('Números pares:', pares);
+    console.log('Original array:', numbers);
+    console.log('Even numbers:', evens);
 });
 
 // Exercise 4
-let obj = { nombre: 'Ola', edad: 25, ciudad: 'Barcelona' };
+let obj = { name: 'Ola', age: 25, city: 'Barcelona' };
 
 // HTML part to test
 const exercise4Test = document.getElementById('run-exercise-4-btn');
 exercise4Test.addEventListener('click', () => {
     
-    for (const clave in obj) {
-        console.log(clave + ': ' + obj[clave]);
+    for (const key in obj) {
+        console.log(key + ': ' + obj[key]);
     }
 });
 
 // Exercise 5
-let numerosBreak = [1, 2, 3, 4, 5, 6];
+let numbersBreak = [1, 2, 3, 4, 5, 6];
 
 // HTML part to test
 const exercise5Test = document.getElementById('run-exercise-5-btn');
 exercise5Test.addEventListener('click', () => {
     
-    for (const num of numerosBreak) {
+    for (const num of numbersBreak) {
         if (num === 5) {
             break;
         }
@@ -60,13 +60,13 @@ exercise5Test.addEventListener('click', () => {
 });
 
 // Exercise 6
-let nomsIndex = ['Anna', 'Bernat', 'Clara'];
+let namesIndex = ['Anna', 'Bernat', 'Clara'];
 
 // HTML part to test
 const exercise6Test = document.getElementById('run-exercise-6-btn');
 exercise6Test.addEventListener('click', () => {
     
-    for (const [index, nom] of nomsIndex.entries()) {
-        console.log(index + ': ' + nom);
+    for (const [index, name] of namesIndex.entries()) {
+        console.log(index + ': ' + name);
     }
 });
