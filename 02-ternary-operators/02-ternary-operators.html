@@ -25,7 +25,7 @@
                 <h3 id="function-section">Code:</h3>
                 <pre role="img" aria-label="JavaScript code showing ternary operator usage">
                     <code class="javascript-code" tabindex="0">
-                        const puedeConducir = (edad) => edad >= 18 ? 'You can drive' : 'You cannot drive';
+                        const canDrive = (age) => age >= 18 ? 'You can drive' : 'You cannot drive';
                     </code>
                 </pre>
             </section>
@@ -33,7 +33,7 @@
                 <h3 id="usage-section">Example:</h3>
                 <pre role="img" aria-label="JavaScript code showing ternary operator usage">
                     <code class="javascript-code" tabindex="0">
-                        const result = puedeConducir(20);
+                        const result = canDrive(20);
                         console.log(result);
                     </code>
                 </pre>
@@ -53,7 +53,7 @@
                 <h3 id="function2-section">Code:</h3>
                 <pre role="img" aria-label="JavaScript code showing ternary operator for comparison">
                     <code class="javascript-code" tabindex="0">
-                        const compararNumeros = (num1, num2) => num1 > num2 ? 'num1 is greater' : 'num2 is greater';
+                        const compareNumbers = (num1, num2) => num1 > num2 ? 'num1 is greater' : 'num2 is greater';
                     </code>
                 </pre>
             </section>
@@ -61,7 +61,7 @@
                 <h3 id="usage2-section">Example:</h3>
                 <pre role="img" aria-label="JavaScript code showing ternary operator usage">
                     <code class="javascript-code" tabindex="0">
-                        const result = compararNumeros(10, 5);
+                        const result = compareNumbers(10, 5);
                         console.log(result);
                     </code>
                 </pre>
@@ -81,9 +81,9 @@
                 <h3 id="function3-1-section">Code:</h3>
                 <pre role="img" aria-label="JavaScript code showing chained ternary operators">
                     <code class="javascript-code" tabindex="0">
-                        const clasificarNumero = (numero) => 
-                            numero > 0 ? 'Positive' : 
-                            numero < 0 ? 'Negative' : 'Zero';
+                        const classifyNumber = (number) => 
+                            number > 0 ? 'Positive' : 
+                            number < 0 ? 'Negative' : 'Zero';
                     </code>
                 </pre>
             </section>
@@ -91,7 +91,7 @@
                 <h3 id="usage3-1-section">Example:</h3>
                 <pre role="img" aria-label="JavaScript code showing chained ternary operator usage">
                     <code class="javascript-code" tabindex="0">
-                        const result = clasificarNumero(5);
+                        const result = classifyNumber(5);
                         console.log(result);
                     </code>
                 </pre>
@@ -111,7 +111,7 @@
                 <h3 id="function-3-2-section">Code:</h3>
                 <pre role="img" aria-label="JavaScript code showing alternative chained ternary operator">
                     <code class="javascript-code" tabindex="0">
-                        const encontrarMaximo = (a, b, c) => 
+                        const findMaximum = (a, b, c) => 
                             a >= b && a >= c ? a : 
                             b >= c ? b : c;
                     </code>
@@ -121,7 +121,7 @@
                 <h3 id="usage-3-2-section">Example:</h3>
                 <pre role="img" aria-label="JavaScript code showing alternative chained ternary operator usage">
                     <code class="javascript-code" tabindex="0">
-                        const result = encontrarMaximo(10, 5, 8);
+                        const result = findMaximum(10, 5, 8);
                         console.log(result);
                     </code>
                 </pre>
@@ -141,10 +141,10 @@
                 <h3 id="function-4-section">Code:</h3>
                 <pre role="img" aria-label="JavaScript code showing ternary operator within functions">
                     <code class="javascript-code" tabindex="0">
-                        const parOImpar = (numeros) => {
-                            for (let i = 0; i < numeros.length; i++) {
-                                const resultado = numeros[i] % 2 === 0 ? 'Even' : 'Odd';
-                                console.log(`${numeros[i]} is ${resultado}`);
+                        const evenOrOdd = (numbers) => {
+                            for (let i = 0; i < numbers.length; i++) {
+                                const result = numbers[i] % 2 === 0 ? 'Even' : 'Odd';
+                                console.log(`${numbers[i]} is ${result}`);
                             }
                         };
                     </code>
@@ -154,8 +154,8 @@
                 <h3 id="usage-4-section">Example:</h3>
                 <pre role="img" aria-label="JavaScript code showing ternary operator in functions">
                     <code class="javascript-code" tabindex="0">
-                        const numeros = [1, 2, 3, 4, 5, 6];
-                        parOImpar(numeros);
+                        const numbers = [1, 2, 3, 4, 5, 6];
+                        evenOrOdd(numbers);
                     </code>
                 </pre>
             </section>
