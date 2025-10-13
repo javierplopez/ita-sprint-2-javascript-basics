@@ -1,7 +1,7 @@
 // Exercise 1
-const miPromesa = new Promise((resolve) => {
+const myPromise = new Promise((resolve) => {
     setTimeout(() => {
-        resolve('Hola, mundo');
+        resolve('Hello, world');
     }, 2000);
 });
 
@@ -9,8 +9,8 @@ const miPromesa = new Promise((resolve) => {
 const exercise1Test = document.getElementById('run-exercise-1-btn');
 exercise1Test.addEventListener('click', () => {
     
-    console.log('Ejecutando promesa... (espera 2 segundos)');
-    miPromesa.then(resultado => console.log(resultado));
+    console.log('Executing promise... (wait 2 seconds)');
+    myPromise.then(result => console.log(result));
 });
 
 // Exercise 2
@@ -18,21 +18,21 @@ exercise1Test.addEventListener('click', () => {
 const exercise2Test = document.getElementById('run-exercise-2-btn');
 exercise2Test.addEventListener('click', () => {
     
-    console.log('Utilizando la promesa con .then()... (espera 2 segundos)');
-    miPromesa
-        .then(resultado => {
-            console.log(resultado);
+    console.log('Using promise with .then()... (wait 2 seconds)');
+    myPromise
+        .then(result => {
+            console.log(result);
         });
 });
 
 // Exercise 3
-const promesaCondicional = (input) => {
+const conditionalPromise = (input) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            if (input === 'Hola') {
-                resolve('Promesa resuelta');
+            if (input === 'Hello') {
+                resolve('Promise resolved');
             } else {
-                reject('Promesa rechazada');
+                reject('Promise rejected');
             }
         }, 2000);
     });
@@ -42,36 +42,36 @@ const promesaCondicional = (input) => {
 const exercise3Test = document.getElementById('run-exercise-3-btn');
 exercise3Test.addEventListener('click', () => {
     
-    console.log('Probando con "Hola"... (espera 2 segundos)');
-    promesaCondicional('Hola')
+    console.log('Testing with "Hello"... (wait 2 seconds)');
+    conditionalPromise('Hello')
         .then(result => console.log(result))
         .catch(error => console.log(error));
     
-    console.log('Probando con "Adios"... (espera 2 segundos)');
-    promesaCondicional('Adios')
+    console.log('Testing with "Goodbye"... (wait 2 seconds)');
+    conditionalPromise('Goodbye')
         .then(result => console.log(result))
         .catch(error => console.log(error));
 });
 
 // Exercise 4
-async function ejecutarPromesa() {
-    const resultado = await miPromesa;
-    console.log(resultado);
+async function executePromise() {
+    const result = await myPromise;
+    console.log(result);
 }
 
 // HTML part to test
 const exercise4Test = document.getElementById('run-exercise-4-btn');
 exercise4Test.addEventListener('click', () => {
     
-    console.log('Ejecutando función async/await... (espera 2 segundos)');
-    ejecutarPromesa();
+    console.log('Executing async/await function... (wait 2 seconds)');
+    executePromise();
 });
 
 // Exercise 5
-async function ejecutarPromesaConErrores() {
+async function executePromiseWithErrors() {
     try {
-        const resultado = await miPromesa;
-        console.log(resultado);
+        const result = await myPromise;
+        console.log(result);
     } catch (error) {
         console.log('Error:', error);
     }
@@ -81,19 +81,19 @@ async function ejecutarPromesaConErrores() {
 const exercise5Test = document.getElementById('run-exercise-5-btn');
 exercise5Test.addEventListener('click', () => {
     
-    console.log('Ejecutando función async/await con try/catch... (espera 2 segundos)');
-    ejecutarPromesaConErrores();
+    console.log('Executing async/await function with try/catch... (wait 2 seconds)');
+    executePromiseWithErrors();
 });
 
 // Exercise 6
-const promesa1 = new Promise(resolve => setTimeout(() => resolve('Promesa 1 resuelta'), 2000));
-const promesa2 = new Promise(resolve => setTimeout(() => resolve('Promesa 2 resuelta'), 3000));
+const promise1 = new Promise(resolve => setTimeout(() => resolve('Promise 1 resolved'), 2000));
+const promise2 = new Promise(resolve => setTimeout(() => resolve('Promise 2 resolved'), 3000));
 
 // HTML part to test
 const exercise6Test = document.getElementById('run-exercise-6-btn');
 exercise6Test.addEventListener('click', () => {
     
-    console.log('Ejecutando Promise.all... (espera 3 segundos)');
-    Promise.all([promesa1, promesa2])
-        .then(resultados => console.log(resultados));
+    console.log('Executing Promise.all... (wait 3 seconds)');
+    Promise.all([promise1, promise2])
+        .then(results => console.log(results));
 });
