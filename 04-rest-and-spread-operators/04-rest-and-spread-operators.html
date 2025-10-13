@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JavaScript Rest and Spread Operators exercise - Learn and practice rest and spread operator syntax with interactive examples">
+    <title>Rest and Spread Operators - JavaScript Exercise 4</title>
+    <link rel="icon" type="image/x-icon" href="../src/img/javascript-logo.svg">
+    <link rel="stylesheet" href="../src/css/styles.css">
+</head>
+<body>
+    <header class="header-title">
+        <a href="../index.html" class="logo-link" aria-label="Return to main page - Basic JavaScript Exercises">
+            <img src="../src/img/javascript-logo.svg" alt="JavaScript Logo" class="js-logo">
+        </a>
+        <h1>4. Rest and Spread Operators</h1>
+    </header>
+    <div class="console-notice" role="alert" aria-live="polite">
+        <p><span aria-hidden="true">⚠️</span> Important: Open the browser console to see the results</p>
+    </div>
+    <main>
+        <article>
+            <h2 id="exercise-1-title">Exercise 1</h2>
+            <section aria-labelledby="function-section">
+                <h3 id="function-section">Code:</h3>
+                <pre role="img" aria-label="JavaScript code showing spread operator with arrays">
+                    <code class="javascript-code" tabindex="0">
+                        const array1 = [1, 2, 3];
+                        const array2 = [4, 5, 6];
+                        
+                        // Usando operador spread para combinar arrays
+                        const array3 = [...array1, ...array2];
+                    </code>
+                </pre>
+            </section>
+            <section aria-labelledby="usage-section">
+                <h3 id="usage-section">Example of usage:</h3>
+                <pre role="img" aria-label="JavaScript code showing spread operator usage and console output">
+                    <code class="javascript-code" tabindex="0">
+                        console.log('Array 1:', array1); // [1, 2, 3]
+                        console.log('Array 2:', array2); // [4, 5, 6]
+                        console.log('Array 3 (combinado):', array3); // [1, 2, 3, 4, 5, 6]
+                        
+                        // También se puede insertar elementos en el medio
+                        const array4 = [...array1, 'intermedio', ...array2];
+                        console.log('Array 4:', array4); // [1, 2, 3, 'intermedio', 4, 5, 6]
+                    </code>
+                </pre>
+            </section>
+            <button 
+                id="run-exercise-1-btn" 
+                type="button"
+                aria-describedby="console-notice"
+                aria-label="Execute the spread operator exercise and display results in browser console">
+                Run Exercise 1
+            </button>
+        </article>
+
+        <article>
+            <h2 id="exercise-2-title">Exercise 2</h2>
+            <section aria-labelledby="function2-section">
+                <h3 id="function2-section">Function:</h3>
+                <pre role="img" aria-label="JavaScript code showing rest operator in function">
+                    <code class="javascript-code" tabindex="0">
+                        const suma = (...numeros) => {
+                            return numeros.reduce((total, num) => total + num, 0);
+                        };
+                    </code>
+                </pre>
+            </section>
+            <section aria-labelledby="usage2-section">
+                <h3 id="usage2-section">Example of usage:</h3>
+                <pre role="img" aria-label="JavaScript code showing rest operator function usage and console output">
+                    <code class="javascript-code" tabindex="0">
+                        console.log(suma(1, 2, 3)); // 6
+                        console.log(suma(10, 20, 30, 40)); // 100
+                        console.log(suma(5)); // 5
+                        console.log(suma()); // 0
+                        
+                        // También funciona con arrays usando spread
+                        const numerosArray = [7, 8, 9];
+                        console.log(suma(...numerosArray)); // 24
+                    </code>
+                </pre>
+            </section>
+            <button 
+                id="run-exercise-2-btn" 
+                type="button"
+                aria-describedby="console-notice"
+                aria-label="Execute the rest operator exercise and display results in browser console">
+                Run Exercise 2
+            </button>
+        </article>
+
+        <article>
+            <h2 id="exercise-3-title">Exercise 3</h2>
+            <section aria-labelledby="function3-section">
+                <h3 id="function3-section">Code:</h3>
+                <pre role="img" aria-label="JavaScript code showing spread operator with objects">
+                    <code class="javascript-code" tabindex="0">
+                        const objeto1 = {
+                            nombre: 'Ana',
+                            edad: 25,
+                            ciudad: 'Madrid'
+                        };
+                        
+                        // Copiando objeto con spread
+                        const objeto2 = { ...objeto1 };
+                        
+                        // Modificando objeto2
+                        objeto2.edad = 30;
+                        objeto2.profesion = 'Desarrolladora';
+                    </code>
+                </pre>
+            </section>
+            <section aria-labelledby="usage3-section">
+                <h3 id="usage3-section">Example of usage:</h3>
+                <pre role="img" aria-label="JavaScript code showing object spread usage and console output">
+                    <code class="javascript-code" tabindex="0">
+                        console.log('Objeto1:', objeto1);
+                        // { nombre: 'Ana', edad: 25, ciudad: 'Madrid' }
+                        
+                        console.log('Objeto2:', objeto2);
+                        // { nombre: 'Ana', edad: 30, ciudad: 'Madrid', profesion: 'Desarrolladora' }
+                        
+                        console.log('¿Son el mismo objeto?', objeto1 === objeto2); // false
+                    </code>
+                </pre>
+            </section>
+            <button 
+                id="run-exercise-3-btn" 
+                type="button"
+                aria-describedby="console-notice"
+                aria-label="Execute the object spread exercise and display results in browser console">
+                Run Exercise 3
+            </button>
+        </article>
+
+        <article>
+            <h2 id="exercise-4-title">Exercise 4</h2>
+            <section aria-labelledby="function4-section">
+                <h3 id="function4-section">Code:</h3>
+                <pre role="img" aria-label="JavaScript code showing rest operator in destructuring">
+                    <code class="javascript-code" tabindex="0">
+                        const colores = ['rojo', 'verde', 'azul', 'amarillo', 'naranja', 'morado'];
+                        
+                        // Destructuring con operador rest
+                        const [primero, segundo, ...resto] = colores;
+                    </code>
+                </pre>
+            </section>
+            <section aria-labelledby="usage4-section">
+                <h3 id="usage4-section">Example of usage:</h3>
+                <pre role="img" aria-label="JavaScript code showing rest destructuring usage and console output">
+                    <code class="javascript-code" tabindex="0">
+                        console.log('Primer elemento:', primero); // 'rojo'
+                        console.log('Segundo elemento:', segundo); // 'verde'
+                        console.log('Resto de elementos:', resto); 
+                        // ['azul', 'amarillo', 'naranja', 'morado']
+                        
+                        console.log('Array original:', colores);
+                        // ['rojo', 'verde', 'azul', 'amarillo', 'naranja', 'morado']
+                    </code>
+                </pre>
+            </section>
+            <button 
+                id="run-exercise-4-btn" 
+                type="button"
+                aria-describedby="console-notice"
+                aria-label="Execute the rest destructuring exercise and display results in browser console">
+                Run Exercise 4
+            </button>
+        </article>
+
+        <article>
+            <h2 id="exercise-5-title">Exercise 5</h2>
+            <section aria-labelledby="function5-section">
+                <h3 id="function5-section">Function:</h3>
+                <pre role="img" aria-label="JavaScript code showing spread operator in function calls">
+                    <code class="javascript-code" tabindex="0">
+                        const saludar = (nombre, apellido, edad) => {
+                            return `Hola, ${nombre} ${apellido}. Tienes ${edad} años.`;
+                        };
+                        
+                        const datosPersona = ['Ana', 'García', 28];
+                    </code>
+                </pre>
+            </section>
+            <section aria-labelledby="usage5-section">
+                <h3 id="usage5-section">Example of usage:</h3>
+                <pre role="img" aria-label="JavaScript code showing spread function call usage and console output">
+                    <code class="javascript-code" tabindex="0">
+                        // Llamada normal
+                        const mensaje1 = saludar('Carlos', 'López', 35);
+                        console.log(mensaje1); // Hola, Carlos López. Tienes 35 años.
+                        
+                        // Llamada usando spread
+                        const mensaje2 = saludar(...datosPersona);
+                        console.log(mensaje2); // Hola, Ana García. Tienes 28 años.
+                    </code>
+                </pre>
+            </section>
+            <button 
+                id="run-exercise-5-btn" 
+                type="button"
+                aria-describedby="console-notice"
+                aria-label="Execute the spread function call exercise and display results in browser console">
+                Run Exercise 5
+            </button>
+        </article>
+
+        <article>
+            <h2 id="exercise-6-title">Exercise 6</h2>
+            <section aria-labelledby="function6-section">
+                <h3 id="function6-section">Code:</h3>
+                <pre role="img" aria-label="JavaScript code showing object merging with spread operator">
+                    <code class="javascript-code" tabindex="0">
+                        const objeto1 = {
+                            nombre: 'Carlos',
+                            edad: 30,
+                            ciudad: 'Madrid'
+                        };
+                        
+                        const objeto2 = {
+                            profesion: 'Desarrollador',
+                            email: 'carlos@email.com',
+                            activo: true
+                        };
+                        
+                        // Fusionando objetos con spread
+                        const objetoFusionado = { ...objeto1, ...objeto2 };
+                    </code>
+                </pre>
+            </section>
+            <section aria-labelledby="usage6-section">
+                <h3 id="usage6-section">Example of usage:</h3>
+                <pre role="img" aria-label="JavaScript code showing object merging usage and console output">
+                    <code class="javascript-code" tabindex="0">
+                        console.log('Objeto 1:', objeto1);
+                        // { nombre: 'Carlos', edad: 30, ciudad: 'Madrid' }
+                        
+                        console.log('Objeto 2:', objeto2);
+                        // { profesion: 'Desarrollador', email: 'carlos@email.com', activo: true }
+                        
+                        console.log('Objeto fusionado:', objetoFusionado);
+                        // { nombre: 'Carlos', edad: 30, ciudad: 'Madrid', 
+                        //   profesion: 'Desarrollador', email: 'carlos@email.com', activo: true }
+                    </code>
+                </pre>
+            </section>
+            <button 
+                id="run-exercise-6-btn" 
+                type="button"
+                aria-describedby="console-notice"
+                aria-label="Execute the object merging exercise and display results in browser console">
+                Run Exercise 6
+            </button>
+        </article>
+
+    </main>
+    <script src="04-rest-and-spread-operators.js"></script>
+</body>
+</html>
