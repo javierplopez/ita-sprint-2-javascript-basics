@@ -21,29 +21,24 @@
     <main>
         <article>
             <h2 id="exercise-1-title">Exercise 1</h2>
-            <section aria-labelledby="function-section">
-                <h3 id="function-section">Code:</h3>
+            <section aria-labelledby="function-1-section">
+                <h3 id="function-1-section">Code:</h3>
                 <pre role="img" aria-label="JavaScript code showing spread operator with arrays">
                     <code class="javascript-code" tabindex="0">
                         const array1 = [1, 2, 3];
                         const array2 = [4, 5, 6];
                         
-                        // Usando operador spread para combinar arrays
                         const array3 = [...array1, ...array2];
                     </code>
                 </pre>
             </section>
-            <section aria-labelledby="usage-section">
-                <h3 id="usage-section">Example of usage:</h3>
+            <section aria-labelledby="usage-1-section">
+                <h3 id="usage-1-section">Example:</h3>
                 <pre role="img" aria-label="JavaScript code showing spread operator usage and console output">
                     <code class="javascript-code" tabindex="0">
-                        console.log('Array 1:', array1); // [1, 2, 3]
-                        console.log('Array 2:', array2); // [4, 5, 6]
-                        console.log('Array 3 (combinado):', array3); // [1, 2, 3, 4, 5, 6]
-                        
-                        // También se puede insertar elementos en el medio
-                        const array4 = [...array1, 'intermedio', ...array2];
-                        console.log('Array 4:', array4); // [1, 2, 3, 'intermedio', 4, 5, 6]
+                        console.log('Array 1:', array1);
+                        console.log('Array 2:', array2);
+                        console.log('Array 3 (combined):', array3);
                     </code>
                 </pre>
             </section>
@@ -58,28 +53,22 @@
 
         <article>
             <h2 id="exercise-2-title">Exercise 2</h2>
-            <section aria-labelledby="function2-section">
-                <h3 id="function2-section">Function:</h3>
+            <section aria-labelledby="function-2-section">
+                <h3 id="function-2-section">Code:</h3>
                 <pre role="img" aria-label="JavaScript code showing rest operator in function">
                     <code class="javascript-code" tabindex="0">
-                        const suma = (...numeros) => {
-                            return numeros.reduce((total, num) => total + num, 0);
+                        const suma = (...numbers) => {
+                            return numbers.reduce((total, num) => total + num, 0);
                         };
                     </code>
                 </pre>
             </section>
-            <section aria-labelledby="usage2-section">
-                <h3 id="usage2-section">Example of usage:</h3>
+            <section aria-labelledby="usage-2-section">
+                <h3 id="usage-2-section">Example:</h3>
                 <pre role="img" aria-label="JavaScript code showing rest operator function usage and console output">
                     <code class="javascript-code" tabindex="0">
-                        console.log(suma(1, 2, 3)); // 6
-                        console.log(suma(10, 20, 30, 40)); // 100
-                        console.log(suma(5)); // 5
-                        console.log(suma()); // 0
-                        
-                        // También funciona con arrays usando spread
-                        const numerosArray = [7, 8, 9];
-                        console.log(suma(...numerosArray)); // 24
+                        console.log(suma(1, 2, 3));
+                        console.log(suma(10, 20, 30, 40));
                     </code>
                 </pre>
             </section>
@@ -94,36 +83,30 @@
 
         <article>
             <h2 id="exercise-3-title">Exercise 3</h2>
-            <section aria-labelledby="function3-section">
-                <h3 id="function3-section">Code:</h3>
+            <section aria-labelledby="function-3-section">
+                <h3 id="function-3-section">Code:</h3>
                 <pre role="img" aria-label="JavaScript code showing spread operator with objects">
                     <code class="javascript-code" tabindex="0">
-                        const objeto1 = {
-                            nombre: 'Ana',
-                            edad: 25,
-                            ciudad: 'Madrid'
+                        const object1 = {
+                            name: 'Ana',
+                            age: 25,
+                            city: 'Madrid'
                         };
                         
-                        // Copiando objeto con spread
-                        const objeto2 = { ...objeto1 };
+                        const object2 = { ...object1 };
                         
-                        // Modificando objeto2
-                        objeto2.edad = 30;
-                        objeto2.profesion = 'Desarrolladora';
+                        object2.age = 30;
+                        object2.profession = 'Developer';
                     </code>
                 </pre>
             </section>
-            <section aria-labelledby="usage3-section">
-                <h3 id="usage3-section">Example of usage:</h3>
+            <section aria-labelledby="usage-3-section">
+                <h3 id="usage-3-section">Example:</h3>
                 <pre role="img" aria-label="JavaScript code showing object spread usage and console output">
                     <code class="javascript-code" tabindex="0">
-                        console.log('Objeto1:', objeto1);
-                        // { nombre: 'Ana', edad: 25, ciudad: 'Madrid' }
-                        
-                        console.log('Objeto2:', objeto2);
-                        // { nombre: 'Ana', edad: 30, ciudad: 'Madrid', profesion: 'Desarrolladora' }
-                        
-                        console.log('¿Son el mismo objeto?', objeto1 === objeto2); // false
+                        console.log('Object 1:', object1);
+                        console.log('Object 2:', object2);
+                        console.log('Are they the same object?', object1 === object2);
                     </code>
                 </pre>
             </section>
@@ -138,28 +121,23 @@
 
         <article>
             <h2 id="exercise-4-title">Exercise 4</h2>
-            <section aria-labelledby="function4-section">
-                <h3 id="function4-section">Code:</h3>
+            <section aria-labelledby="function-4-section">
+                <h3 id="function-4-section">Code:</h3>
                 <pre role="img" aria-label="JavaScript code showing rest operator in destructuring">
                     <code class="javascript-code" tabindex="0">
-                        const colores = ['rojo', 'verde', 'azul', 'amarillo', 'naranja', 'morado'];
+                        const colors = ['red', 'green', 'blue', 'yellow', 'orange', 'purple'];
                         
-                        // Destructuring con operador rest
-                        const [primero, segundo, ...resto] = colores;
+                        const [first, second, ...rest] = colors;
                     </code>
                 </pre>
             </section>
-            <section aria-labelledby="usage4-section">
-                <h3 id="usage4-section">Example of usage:</h3>
+            <section aria-labelledby="usage-4-section">
+                <h3 id="usage-4-section">Example:</h3>
                 <pre role="img" aria-label="JavaScript code showing rest destructuring usage and console output">
                     <code class="javascript-code" tabindex="0">
-                        console.log('Primer elemento:', primero); // 'rojo'
-                        console.log('Segundo elemento:', segundo); // 'verde'
-                        console.log('Resto de elementos:', resto); 
-                        // ['azul', 'amarillo', 'naranja', 'morado']
-                        
-                        console.log('Array original:', colores);
-                        // ['rojo', 'verde', 'azul', 'amarillo', 'naranja', 'morado']
+                        console.log('First element:', first);
+                        console.log('Second element:', second);
+                        console.log('Rest of elements:', rest);
                     </code>
                 </pre>
             </section>
@@ -175,28 +153,22 @@
         <article>
             <h2 id="exercise-5-title">Exercise 5</h2>
             <section aria-labelledby="function5-section">
-                <h3 id="function5-section">Function:</h3>
+                <h3 id="function5-section">Code:</h3>
                 <pre role="img" aria-label="JavaScript code showing spread operator in function calls">
                     <code class="javascript-code" tabindex="0">
-                        const saludar = (nombre, apellido, edad) => {
-                            return `Hola, ${nombre} ${apellido}. Tienes ${edad} años.`;
+                        const greet = (name, surname, age) => {
+                            return `Hello, ${name} ${surname}. You are ${age} years old.`;
                         };
                         
-                        const datosPersona = ['Ana', 'García', 28];
+                        const personData = ['Ana', 'García', 28];
                     </code>
                 </pre>
             </section>
-            <section aria-labelledby="usage5-section">
-                <h3 id="usage5-section">Example of usage:</h3>
+            <section aria-labelledby="usage-5-section">
+                <h3 id="usage-5-section">Example:</h3>
                 <pre role="img" aria-label="JavaScript code showing spread function call usage and console output">
                     <code class="javascript-code" tabindex="0">
-                        // Llamada normal
-                        const mensaje1 = saludar('Carlos', 'López', 35);
-                        console.log(mensaje1); // Hola, Carlos López. Tienes 35 años.
-                        
-                        // Llamada usando spread
-                        const mensaje2 = saludar(...datosPersona);
-                        console.log(mensaje2); // Hola, Ana García. Tienes 28 años.
+                        console.log(greet(...personData));
                     </code>
                 </pre>
             </section>
@@ -211,40 +183,32 @@
 
         <article>
             <h2 id="exercise-6-title">Exercise 6</h2>
-            <section aria-labelledby="function6-section">
-                <h3 id="function6-section">Code:</h3>
+            <section aria-labelledby="function-6-section">
+                <h3 id="function-6-section">Code:</h3>
                 <pre role="img" aria-label="JavaScript code showing object merging with spread operator">
                     <code class="javascript-code" tabindex="0">
-                        const objeto1 = {
-                            nombre: 'Carlos',
-                            edad: 30,
-                            ciudad: 'Madrid'
+                        const objectA = {
+                            name: 'Carlos',
+                            age: 30,
+                            city: 'Madrid'
                         };
                         
-                        const objeto2 = {
-                            profesion: 'Desarrollador',
+                        const objectB = {
+                            profession: 'Developer',
                             email: 'carlos@email.com',
-                            activo: true
+                            active: true
                         };
                         
-                        // Fusionando objetos con spread
-                        const objetoFusionado = { ...objeto1, ...objeto2 };
+                        // Merging objects with spread
+                        const mergedObject = { ...objectA, ...objectB };
                     </code>
                 </pre>
             </section>
-            <section aria-labelledby="usage6-section">
-                <h3 id="usage6-section">Example of usage:</h3>
+            <section aria-labelledby="usage-6-section">
+                <h3 id="usage-6-section">Example:</h3>
                 <pre role="img" aria-label="JavaScript code showing object merging usage and console output">
                     <code class="javascript-code" tabindex="0">
-                        console.log('Objeto 1:', objeto1);
-                        // { nombre: 'Carlos', edad: 30, ciudad: 'Madrid' }
-                        
-                        console.log('Objeto 2:', objeto2);
-                        // { profesion: 'Desarrollador', email: 'carlos@email.com', activo: true }
-                        
-                        console.log('Objeto fusionado:', objetoFusionado);
-                        // { nombre: 'Carlos', edad: 30, ciudad: 'Madrid', 
-                        //   profesion: 'Desarrollador', email: 'carlos@email.com', activo: true }
+                        console.log(mergedObject);
                     </code>
                 </pre>
             </section>
