@@ -21,23 +21,20 @@
     <main>
         <article>
             <h2 id="exercise-1-title">Exercise 1</h2>
-            <section aria-labelledby="function-section">
-                <h3 id="function-section">Function:</h3>
-                <pre role="img" aria-label="JavaScript code showing ternary operator function definition">
+                        <section aria-labelledby="function-section">
+                <h3 id="function-section">Code:</h3>
+                <pre role="img" aria-label="JavaScript code showing ternary operator usage">
                     <code class="javascript-code" tabindex="0">
-                        const puedeConducir = (edad) => edad >= 18 ? 'Puedes conducir' : 'No puedes conducir';
+                        const puedeConducir = (edad) => edad >= 18 ? 'You can drive' : 'You cannot drive';
                     </code>
                 </pre>
             </section>
             <section aria-labelledby="usage-section">
-                <h3 id="usage-section">Example of usage:</h3>
-                <pre role="img" aria-label="JavaScript code showing function usage and console output">
+                <h3 id="usage-section">Example:</h3>
+                <pre role="img" aria-label="JavaScript code showing ternary operator usage">
                     <code class="javascript-code" tabindex="0">
-                        const result1 = puedeConducir(20);
-                        console.log(result1); // Puedes conducir
-                        
-                        const result2 = puedeConducir(16);
-                        console.log(result2); // No puedes conducir
+                        const result = puedeConducir(20);
+                        console.log(result);
                     </code>
                 </pre>
             </section>
@@ -53,22 +50,19 @@
         <article>
             <h2 id="exercise-2-title">Exercise 2</h2>
             <section aria-labelledby="function2-section">
-                <h3 id="function2-section">Function:</h3>
-                <pre role="img" aria-label="JavaScript code showing ternary operator with comparison">
+                <h3 id="function2-section">Code:</h3>
+                <pre role="img" aria-label="JavaScript code showing ternary operator for comparison">
                     <code class="javascript-code" tabindex="0">
-                        const compararNumeros = (num1, num2) => num1 > num2 ? 'num1 es mayor' : 'num2 es mayor';
+                        const compararNumeros = (num1, num2) => num1 > num2 ? 'num1 is greater' : 'num2 is greater';
                     </code>
                 </pre>
             </section>
             <section aria-labelledby="usage2-section">
-                <h3 id="usage2-section">Example of usage:</h3>
-                <pre role="img" aria-label="JavaScript code showing function usage and console output">
+                <h3 id="usage2-section">Example:</h3>
+                <pre role="img" aria-label="JavaScript code showing ternary operator usage">
                     <code class="javascript-code" tabindex="0">
-                        const result1 = compararNumeros(10, 5);
-                        console.log(result1); // num1 es mayor
-                        
-                        const result2 = compararNumeros(3, 8);
-                        console.log(result2); // num2 es mayor
+                        const result = compararNumeros(10, 5);
+                        console.log(result);
                     </code>
                 </pre>
             </section>
@@ -84,27 +78,21 @@
         <article>
             <h2 id="exercise-3-1-title">Exercise 3.1</h2>
             <section aria-labelledby="function3-1-section">
-                <h3 id="function3-1-section">Function:</h3>
+                <h3 id="function3-1-section">Code:</h3>
                 <pre role="img" aria-label="JavaScript code showing chained ternary operators">
                     <code class="javascript-code" tabindex="0">
                         const clasificarNumero = (numero) => 
-                            numero > 0 ? 'Positivo' : 
-                            numero < 0 ? 'Negativo' : 'Cero';
+                            numero > 0 ? 'Positive' : 
+                            numero < 0 ? 'Negative' : 'Zero';
                     </code>
                 </pre>
             </section>
             <section aria-labelledby="usage3-1-section">
-                <h3 id="usage3-1-section">Example of usage:</h3>
-                <pre role="img" aria-label="JavaScript code showing function usage and console output">
+                <h3 id="usage3-1-section">Example:</h3>
+                <pre role="img" aria-label="JavaScript code showing chained ternary operator usage">
                     <code class="javascript-code" tabindex="0">
-                        const result1 = clasificarNumero(5);
-                        console.log(result1); // Positivo
-                        
-                        const result2 = clasificarNumero(-3);
-                        console.log(result2); // Negativo
-                        
-                        const result3 = clasificarNumero(0);
-                        console.log(result3); // Cero
+                        const result = clasificarNumero(5);
+                        console.log(result);
                     </code>
                 </pre>
             </section>
@@ -119,9 +107,9 @@
 
         <article>
             <h2 id="exercise-3-2-title">Exercise 3.2</h2>
-            <section aria-labelledby="function-3-2-section">
-                <h3 id="function-3-2-section">Function:</h3>
-                <pre role="img" aria-label="JavaScript code showing ternary operator with functions">
+                        <section aria-labelledby="function-3-2-section">
+                <h3 id="function-3-2-section">Code:</h3>
+                <pre role="img" aria-label="JavaScript code showing alternative chained ternary operator">
                     <code class="javascript-code" tabindex="0">
                         const encontrarMaximo = (a, b, c) => 
                             a >= b && a >= c ? a : 
@@ -130,17 +118,11 @@
                 </pre>
             </section>
             <section aria-labelledby="usage-3-2-section">
-                <h3 id="usage-3-2-section">Example of usage:</h3>
-                <pre role="img" aria-label="JavaScript code showing function usage and console output">
+                <h3 id="usage-3-2-section">Example:</h3>
+                <pre role="img" aria-label="JavaScript code showing alternative chained ternary operator usage">
                     <code class="javascript-code" tabindex="0">
-                        const result1 = encontrarMaximo(10, 5, 8);
-                        console.log(result1); // 10
-                        
-                        const result2 = encontrarMaximo(3, 9, 6);
-                        console.log(result2); // 9
-                        
-                        const result3 = encontrarMaximo(4, 2, 15);
-                        console.log(result3); // 15
+                        const result = encontrarMaximo(10, 5, 8);
+                        console.log(result);
                     </code>
                 </pre>
             </section>
@@ -156,30 +138,24 @@
         <article>
             <h2 id="exercise-4-title">Exercise 4</h2>
             <section aria-labelledby="function-4-section">
-                <h3 id="function-4-section">Function:</h3>
-                <pre role="img" aria-label="JavaScript code showing ternary operator within a loop">
+                <h3 id="function-4-section">Code:</h3>
+                <pre role="img" aria-label="JavaScript code showing ternary operator within functions">
                     <code class="javascript-code" tabindex="0">
                         const parOImpar = (numeros) => {
                             for (let i = 0; i < numeros.length; i++) {
-                                const resultado = numeros[i] % 2 === 0 ? 'Par' : 'Impar';
-                                console.log(`${numeros[i]} es ${resultado}`);
+                                const resultado = numeros[i] % 2 === 0 ? 'Even' : 'Odd';
+                                console.log(`${numeros[i]} is ${resultado}`);
                             }
                         };
                     </code>
                 </pre>
             </section>
             <section aria-labelledby="usage-4-section">
-                <h3 id="usage-4-section">Example of usage:</h3>
-                <pre role="img" aria-label="JavaScript code showing function usage and console output">
+                <h3 id="usage-4-section">Example:</h3>
+                <pre role="img" aria-label="JavaScript code showing ternary operator in functions">
                     <code class="javascript-code" tabindex="0">
                         const numeros = [1, 2, 3, 4, 5, 6];
                         parOImpar(numeros);
-                        // 1 es Impar
-                        // 2 es Par
-                        // 3 es Impar
-                        // 4 es Par
-                        // 5 es Impar
-                        // 6 es Par
                     </code>
                 </pre>
             </section>
