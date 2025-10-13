@@ -81,7 +81,116 @@
             </button>
         </article>
 
-        
+        <article>
+            <h2 id="exercise-3-1-title">Exercise 3.1</h2>
+            <section aria-labelledby="function3-1-section">
+                <h3 id="function3-1-section">Function:</h3>
+                <pre role="img" aria-label="JavaScript code showing chained ternary operators">
+                    <code class="javascript-code" tabindex="0">
+                        const clasificarNumero = (numero) => 
+                            numero > 0 ? 'Positivo' : 
+                            numero < 0 ? 'Negativo' : 'Cero';
+                    </code>
+                </pre>
+            </section>
+            <section aria-labelledby="usage3-1-section">
+                <h3 id="usage3-1-section">Example of usage:</h3>
+                <pre role="img" aria-label="JavaScript code showing function usage and console output">
+                    <code class="javascript-code" tabindex="0">
+                        const result1 = clasificarNumero(5);
+                        console.log(result1); // Positivo
+                        
+                        const result2 = clasificarNumero(-3);
+                        console.log(result2); // Negativo
+                        
+                        const result3 = clasificarNumero(0);
+                        console.log(result3); // Cero
+                    </code>
+                </pre>
+            </section>
+            <button 
+                id="run-exercise-3-1-btn" 
+                type="button"
+                aria-describedby="console-notice"
+                aria-label="Execute the chained ternary operator exercise and display results in browser console">
+                Run Exercise 3.1
+            </button>
+        </article>
+
+        <article>
+            <h2 id="exercise-3-2-title">Exercise 3.2</h2>
+            <section aria-labelledby="function-3-2-section">
+                <h3 id="function-3-2-section">Function:</h3>
+                <pre role="img" aria-label="JavaScript code showing ternary operator with functions">
+                    <code class="javascript-code" tabindex="0">
+                        const encontrarMaximo = (a, b, c) => 
+                            a >= b && a >= c ? a : 
+                            b >= c ? b : c;
+                    </code>
+                </pre>
+            </section>
+            <section aria-labelledby="usage-3-2-section">
+                <h3 id="usage-3-2-section">Example of usage:</h3>
+                <pre role="img" aria-label="JavaScript code showing function usage and console output">
+                    <code class="javascript-code" tabindex="0">
+                        const result1 = encontrarMaximo(10, 5, 8);
+                        console.log(result1); // 10
+                        
+                        const result2 = encontrarMaximo(3, 9, 6);
+                        console.log(result2); // 9
+                        
+                        const result3 = encontrarMaximo(4, 2, 15);
+                        console.log(result3); // 15
+                    </code>
+                </pre>
+            </section>
+            <button 
+                id="run-exercise-3-2-btn" 
+                type="button"
+                aria-describedby="console-notice"
+                aria-label="Execute the ternary operator with functions exercise and display results in browser console">
+                Run Exercise 3.2
+            </button>
+        </article>
+
+        <article>
+            <h2 id="exercise-4-title">Exercise 4</h2>
+            <section aria-labelledby="function-4-section">
+                <h3 id="function-4-section">Function:</h3>
+                <pre role="img" aria-label="JavaScript code showing ternary operator within a loop">
+                    <code class="javascript-code" tabindex="0">
+                        const parOImpar = (numeros) => {
+                            for (let i = 0; i < numeros.length; i++) {
+                                const resultado = numeros[i] % 2 === 0 ? 'Par' : 'Impar';
+                                console.log(`${numeros[i]} es ${resultado}`);
+                            }
+                        };
+                    </code>
+                </pre>
+            </section>
+            <section aria-labelledby="usage-4-section">
+                <h3 id="usage-4-section">Example of usage:</h3>
+                <pre role="img" aria-label="JavaScript code showing function usage and console output">
+                    <code class="javascript-code" tabindex="0">
+                        const numeros = [1, 2, 3, 4, 5, 6];
+                        parOImpar(numeros);
+                        // 1 es Impar
+                        // 2 es Par
+                        // 3 es Impar
+                        // 4 es Par
+                        // 5 es Impar
+                        // 6 es Par
+                    </code>
+                </pre>
+            </section>
+            <button 
+                id="run-exercise-4-btn" 
+                type="button"
+                aria-describedby="console-notice"
+                aria-label="Execute the ternary operator within loop exercise and display results in browser console">
+                Run Exercise 4
+            </button>
+        </article>
     </main>
     <script src="02-ternary-operators.js"></script>
 </body>
