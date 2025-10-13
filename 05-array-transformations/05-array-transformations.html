@@ -25,17 +25,17 @@
                 <h3 id="function-section">Code:</h3>
                 <pre role="img" aria-label="JavaScript code showing map method usage">
                     <code class="javascript-code" tabindex="0">
-                        const numeros = [1, 2, 3, 4];
-                        const cuadrados = numeros.map(num => num * num);
+                        const numbers = [1, 2, 3, 4];
+                        const squares = numbers.map(num => num * num);
                     </code>
                 </pre>
             </section>
             <section aria-labelledby="usage-section">
-                <h3 id="usage-section">Example of usage:</h3>
+                <h3 id="usage-section">Example:</h3>
                 <pre role="img" aria-label="JavaScript code showing map method usage and console output">
                     <code class="javascript-code" tabindex="0">
-                        console.log('Array original:', numeros);
-                        console.log('Array cuadrados:', cuadrados);
+                        console.log('Original array:', numbers);
+                        console.log('Squares array:', squares);
                     </code>
                 </pre>
             </section>
@@ -54,17 +54,17 @@
                 <h3 id="function-section-2">Code:</h3>
                 <pre role="img" aria-label="JavaScript code showing filter method usage">
                     <code class="javascript-code" tabindex="0">
-                        const numeros = [1, 2, 3, 4];
-                        const pares = numeros.filter(num => num % 2 === 0);
+                        const numbers = [1, 2, 3, 4];
+                        const evens = numbers.filter(num => num % 2 === 0);
                     </code>
                 </pre>
             </section>
             <section aria-labelledby="usage-section-2">
-                <h3 id="usage-section-2">Example of usage:</h3>
+                <h3 id="usage-section-2">Example:</h3>
                 <pre role="img" aria-label="JavaScript code showing filter method usage and console output">
                     <code class="javascript-code" tabindex="0">
-                        console.log('Array original:', numeros);
-                        console.log('Números pares:', pares);
+                        console.log('Original array:', numbers);
+                        console.log('Even numbers:', evens);
                     </code>
                 </pre>
             </section>
@@ -83,17 +83,17 @@
                 <h3 id="function-section-3">Code:</h3>
                 <pre role="img" aria-label="JavaScript code showing find method usage">
                     <code class="javascript-code" tabindex="0">
-                        const numeros = [1, 10, 8, 11];
-                        const mayorA10 = numeros.find(num => num > 10);
+                        const findNumbers = [1, 10, 8, 11];
+                        const greaterThan10 = findNumbers.find(num => num > 10);
                     </code>
                 </pre>
             </section>
             <section aria-labelledby="usage-section-3">
-                <h3 id="usage-section-3">Example of usage:</h3>
+                <h3 id="usage-section-3">Example:</h3>
                 <pre role="img" aria-label="JavaScript code showing find method usage and console output">
                     <code class="javascript-code" tabindex="0">
-                        console.log('Array original:', numeros);
-                        console.log('Primer número mayor a 10:', mayorA10);
+                        console.log('Original array:', findNumbers);
+                        console.log('First number greater than 10:', greaterThan10);
                     </code>
                 </pre>
             </section>
@@ -112,17 +112,17 @@
                 <h3 id="function-section-4">Code:</h3>
                 <pre role="img" aria-label="JavaScript code showing reduce method usage">
                     <code class="javascript-code" tabindex="0">
-                        const numeros = [13, 7, 8, 21];
-                        const sumaTotal = numeros.reduce((acumulador, num) => acumulador + num, 0);
+                        const reduceNumbers = [13, 7, 8, 21];
+                        const totalSum = reduceNumbers.reduce((accumulator, num) => accumulator + num, 0);
                     </code>
                 </pre>
             </section>
             <section aria-labelledby="usage-section-4">
-                <h3 id="usage-section-4">Example of usage:</h3>
+                <h3 id="usage-section-4">Example:</h3>
                 <pre role="img" aria-label="JavaScript code showing reduce method usage and console output">
                     <code class="javascript-code" tabindex="0">
-                        console.log('Array original:', numeros);
-                        console.log('Suma total:', sumaTotal);
+                        console.log('Original array:', reduceNumbers);
+                        console.log('Total sum:', totalSum);
                     </code>
                 </pre>
             </section>
@@ -141,17 +141,17 @@
                 <h3 id="function-section-5">Code:</h3>
                 <pre role="img" aria-label="JavaScript code showing chained array methods usage">
                     <code class="javascript-code" tabindex="0">
-                        const numeros = [1, 3, 7, 10, 15, 17, 11, 5, 8, 12, 9];
-                        const resultado = numeros.filter(num => num >= 10).map(num => num * 2).reduce((acc, num) => acc + num, 0);
+                        const combinedNumbers = [1, 3, 7, 10, 15, 17, 11, 5, 8, 12, 9];
+                        const result = combinedNumbers.filter(num => num >= 10).map(num => num * 2).reduce((acc, num) => acc + num, 0);
                     </code>
                 </pre>
             </section>
             <section aria-labelledby="usage-section-5">
-                <h3 id="usage-section-5">Example of usage:</h3>
+                <h3 id="usage-section-5">Example:</h3>
                 <pre role="img" aria-label="JavaScript code showing chained array methods usage and console output">
                     <code class="javascript-code" tabindex="0">
-                        console.log('Array original:', numeros);
-                        console.log('Resultado:', resultado);
+                        console.log('Original array:', combinedNumbers);
+                        console.log('Result:', result);
                     </code>
                 </pre>
             </section>
@@ -170,19 +170,19 @@
                 <h3 id="function-section-6">Code:</h3>
                 <pre role="img" aria-label="JavaScript code showing every and some methods usage">
                     <code class="javascript-code" tabindex="0">
-                        const numeros = [11, 12, 13, 14];
-                        const todosmayor10 = numeros.every(num => num > 10);
-                        const algunomayor10 = numeros.some(num => num > 10);
+                        const everyNumbers = [11, 12, 13, 14];
+                        const allGreaterThan10 = everyNumbers.every(num => num > 10);
+                        const someGreaterThan10 = everyNumbers.some(num => num > 10);
                     </code>
                 </pre>
             </section>
             <section aria-labelledby="usage-section-6">
-                <h3 id="usage-section-6">Example of usage:</h3>
+                <h3 id="usage-section-6">Example:</h3>
                 <pre role="img" aria-label="JavaScript code showing every and some methods usage and console output">
                     <code class="javascript-code" tabindex="0">
-                        console.log('Array original:', numeros);
-                        console.log('Todos mayores que 10:', todosmayor10);
-                        console.log('Algunos mayores que 10:', algunomayor10);
+                        console.log('Original array:', everyNumbers);
+                        console.log('All greater than 10:', allGreaterThan10);
+                        console.log('Some greater than 10:', someGreaterThan10);
                     </code>
                 </pre>
             </section>
@@ -194,7 +194,6 @@
                 Run Exercise 6
             </button>
         </article>
-
         
     </main>
     <script src="05-array-transformations.js"></script>
