@@ -24,9 +24,9 @@ class Person {
         this.name = name;
     }
     
-    // Función de flecha que preserva el contexto de 'this'
+    // Arrow function that preserves 'this' context
     greet = () => {
-        console.log(`Hola, ${this.name}`);
+        console.log(`Hello, ${this.name}`);
     }
 }
 
@@ -34,7 +34,7 @@ class Person {
 const exercise3Test = document.getElementById('run-exercise-3-btn');
 exercise3Test.addEventListener('click', () => {
     const person = new Person('Alice');
-    person.greet(); // Hola, Alice
+    person.greet(); // Hello, Alice
 });
 
 // Exercise 4
@@ -55,13 +55,13 @@ exercise4Test.addEventListener('click', () => {
 // Exercise 5
 const delayedMessage = () => {
     setTimeout(() => {
-        console.log('¡Mensaje después de 3 segundos!');
+        console.log('Message after 3 seconds!');
     }, 3000);
 };
 
 // HTML part to test
 const exercise5Test = document.getElementById('run-exercise-5-btn');
 exercise5Test.addEventListener('click', () => {
-    console.log('Ejecutando función con retraso... Espera 3 segundos');
-    delayedMessage(); // Waits 3 seconds, then prints: ¡Mensaje después de 3 segundos!
+    console.log('Executing delayed function... Wait 3 seconds');
+    delayedMessage(); // Waits 3 seconds, then prints: Message after 3 seconds!
 });
