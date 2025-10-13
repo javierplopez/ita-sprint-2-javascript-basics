@@ -25,11 +25,11 @@
                 <h3 id="function-1-section">Code:</h3>
                 <pre role="img" aria-label="JavaScript code showing callback function definition">
                     <code class="javascript-code" tabindex="0">
-                        const procesar = (numero, callback) => {
-                            callback(numero);
+                        const process = (number, callback) => {
+                            callback(number);
                         };
                         
-                        const duplicar = (num) => {
+                        const double = (num) => {
                             console.log(`The double of ${num} is ${num * 2}`);
                         };
                     </code>
@@ -39,7 +39,7 @@
                 <h3 id="usage-1-section">Example:</h3>
                 <pre role="img" aria-label="JavaScript code showing function usage and console output">
                     <code class="javascript-code" tabindex="0">
-                        procesar(5, duplicar);
+                        process(5, double);
                     </code>
                 </pre>
             </section>
@@ -58,14 +58,14 @@
                 <h3 id="function-2-section">Code:</h3>
                 <pre role="img" aria-label="JavaScript code showing calculator function with callbacks">
                     <code class="javascript-code" tabindex="0">
-                        const calculadora = (num1, num2, callback) => {
+                        const calculator = (num1, num2, callback) => {
                             return callback(num1, num2);
                         };
                         
-                        const sumar = (a, b) => {
-                            const resultado = a + b;
-                            console.log(`${a} + ${b} = ${resultado}`);
-                            return resultado;
+                        const add = (a, b) => {
+                            const result = a + b;
+                            console.log(`${a} + ${b} = ${result}`);
+                            return result;
                         };
                     </code>
                 </pre>
@@ -74,7 +74,7 @@
                 <h3 id="usage-2-section">Example:</h3>
                 <pre role="img" aria-label="JavaScript code showing calculator function usage and console output">
                     <code class="javascript-code" tabindex="0">
-                        calculadora(5, 3, sumar);
+                        calculator(5, 3, add);
                     </code>
                 </pre>
             </section>
@@ -93,14 +93,14 @@
                 <h3 id="function-3-section">Code:</h3>
                 <pre role="img" aria-label="JavaScript code showing asynchronous callback function">
                     <code class="javascript-code" tabindex="0">
-                        const esperarISaludar = (nombre, callback) => {
+                        const waitAndGreet = (name, callback) => {
                             setTimeout(() => {
-                                callback(nombre);
+                                callback(name);
                             }, 2000);
                         };
                         
-                        const saludarPersona = (nombre) => {
-                            console.log(`Hello, ${nombre}! 2 seconds have passed.`);
+                        const greetPerson = (name) => {
+                            console.log(`Hello, ${name}! 2 seconds have passed.`);
                         };
                     </code>
                 </pre>
@@ -109,7 +109,7 @@
                 <h3 id="usage-3-section">Example:</h3>
                 <pre role="img" aria-label="JavaScript code showing asynchronous function usage and console output">
                     <code class="javascript-code" tabindex="0">
-                        esperarISaludar('Ana', saludarPersona);
+                        waitAndGreet('Ana', greetPerson);
                     </code>
                 </pre>
             </section>
@@ -128,7 +128,7 @@
                 <h3 id="function-4-section">Code:</h3>
                 <pre role="img" aria-label="JavaScript code showing callback function with arrays">
                     <code class="javascript-code" tabindex="0">
-                        const procesarElements = (array, callback) => {
+                        const processElements = (array, callback) => {
                             for (let i = 0; i < array.length; i++) {
                                 callback(array[i], i);
                             }
@@ -140,7 +140,7 @@
                 <h3 id="usage-4-section">Example:</h3>
                 <pre role="img" aria-label="JavaScript code showing array callback function usage and console output">
                     <code class="javascript-code" tabindex="0">
-                        procesarElements([1, 2, 3], (num) => {
+                        processElements([1, 2, 3], (num) => {
                             console.log(`The double of ${num} is ${num * 2}`);
                         });
                     </code>
@@ -161,9 +161,9 @@
                 <h3 id="function-5-section">Code:</h3>
                 <pre role="img" aria-label="JavaScript code showing string processing callback function">
                     <code class="javascript-code" tabindex="0">
-                        const procesarCadena = (cadena, callback) => {
-                            const cadenaTransformada = cadena.toUpperCase();
-                            callback(cadenaTransformada);
+                        const processString = (string, callback) => {
+                            const transformedString = string.toUpperCase();
+                            callback(transformedString);
                         };
                     </code>
                 </pre>
@@ -172,8 +172,8 @@
                 <h3 id="usage-5-section">Example:</h3>
                 <pre role="img" aria-label="JavaScript code showing string callback function usage and console output">
                     <code class="javascript-code" tabindex="0">
-                        procesarCadena('javascript', (cadena) => {
-                            console.log(`The string "${cadena}" has ${cadena.length} characters`);
+                        processString('javascript', (string) => {
+                            console.log(`The string "${string}" has ${string.length} characters`);
                         });
                     </code>
                 </pre>

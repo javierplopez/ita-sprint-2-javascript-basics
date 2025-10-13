@@ -1,9 +1,9 @@
 // Exercise 1
-const procesar = (numero, callback) => {
-    callback(numero);
+const process = (number, callback) => {
+    callback(number);
 };
 
-const duplicar = (num) => {
+const double = (num) => {
     console.log(`The double of ${num} is ${num * 2}`);
 };
 
@@ -11,47 +11,47 @@ const duplicar = (num) => {
 const exercise1Test = document.getElementById('run-exercise-1-btn');
 exercise1Test.addEventListener('click', () => {
     
-    procesar(5, duplicar);
+    process(5, double);
 });
 
 // Exercise 2
-const calculadora = (num1, num2, callback) => {
+const calculator = (num1, num2, callback) => {
     return callback(num1, num2);
 };
 
-const sumar = (a, b) => {
-    const resultado = a + b;
-    console.log(`${a} + ${b} = ${resultado}`);
-    return resultado;
+const add = (a, b) => {
+    const result = a + b;
+    console.log(`${a} + ${b} = ${result}`);
+    return result;
 };
 
 // HTML part to test
 const exercise2Test = document.getElementById('run-exercise-2-btn');
 exercise2Test.addEventListener('click', () => {
     
-    calculadora(5, 3, sumar);
+    calculator(5, 3, add);
 });
 
 // Exercise 3
-const esperarISaludar = (nombre, callback) => {
+const waitAndGreet = (name, callback) => {
     setTimeout(() => {
-        callback(nombre);
+        callback(name);
     }, 2000);
 };
 
-const saludarPersona = (nombre) => {
-    console.log(`Hello, ${nombre}! 2 seconds have passed.`);
+const greetPerson = (name) => {
+    console.log(`Hello, ${name}! 2 seconds have passed.`);
 };
 
 // HTML part to test
 const exercise3Test = document.getElementById('run-exercise-3-btn');
 exercise3Test.addEventListener('click', () => {
     
-    esperarISaludar('Ana', saludarPersona);
+    waitAndGreet('Ana', greetPerson);
 });
 
 // Exercise 4
-const procesarElements = (array, callback) => {
+const processElements = (array, callback) => {
     for (let i = 0; i < array.length; i++) {
         callback(array[i], i);
     }
@@ -61,22 +61,22 @@ const procesarElements = (array, callback) => {
 const exercise4Test = document.getElementById('run-exercise-4-btn');
 exercise4Test.addEventListener('click', () => {
     
-    procesarElements([1, 2, 3], (num, indice) => {
+    processElements([1, 2, 3], (num, index) => {
         console.log(`The double of ${num} is ${num * 2}`);
     });
 });
 
 // Exercise 5
-const procesarCadena = (cadena, callback) => {
-    const cadenaTransformada = cadena.toUpperCase();
-    callback(cadenaTransformada);
+const processString = (string, callback) => {
+    const transformedString = string.toUpperCase();
+    callback(transformedString);
 };
 
 // HTML part to test
 const exercise5Test = document.getElementById('run-exercise-5-btn');
 exercise5Test.addEventListener('click', () => {
     
-    procesarCadena('javascript', (cadena) => {
-        console.log(`The string "${cadena}" has ${cadena.length} characters`);
+    processString('javascript', (string) => {
+        console.log(`The string "${string}" has ${string.length} characters`);
     });
 });
