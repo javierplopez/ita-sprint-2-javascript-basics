@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JavaScript Ternary Operators exercise - Learn and practice ternary operator syntax with interactive examples">
+    <title>Ternary Operators - JavaScript Exercise 2</title>
+    <link rel="icon" type="image/x-icon" href="../src/img/javascript-logo.svg">
+    <link rel="stylesheet" href="../src/css/styles.css">
+</head>
+<body>
+    <header class="header-title">
+        <a href="../index.html" class="logo-link" aria-label="Return to main page - Basic JavaScript Exercises">
+            <img src="../src/img/javascript-logo.svg" alt="JavaScript Logo" class="js-logo">
+        </a>
+        <h1>2. Ternary Operators</h1>
+    </header>
+    <div class="console-notice" role="alert" aria-live="polite">
+        <p><span aria-hidden="true">⚠️</span> Important: Open the browser console to see the results</p>
+    </div>
+    <main>
+        <article>
+            <h2 id="exercise-1-title">Exercise 1</h2>
+            <section aria-labelledby="function-section">
+                <h3 id="function-section">Function:</h3>
+                <pre role="img" aria-label="JavaScript code showing ternary operator function definition">
+                    <code class="javascript-code" tabindex="0">
+                        const puedeConducir = (edad) => edad >= 18 ? 'Puedes conducir' : 'No puedes conducir';
+                    </code>
+                </pre>
+            </section>
+            <section aria-labelledby="usage-section">
+                <h3 id="usage-section">Example of usage:</h3>
+                <pre role="img" aria-label="JavaScript code showing function usage and console output">
+                    <code class="javascript-code" tabindex="0">
+                        const result1 = puedeConducir(20);
+                        console.log(result1); // Puedes conducir
+                        
+                        const result2 = puedeConducir(16);
+                        console.log(result2); // No puedes conducir
+                    </code>
+                </pre>
+            </section>
+            <button 
+                id="run-exercise-1-btn" 
+                type="button"
+                aria-describedby="console-notice"
+                aria-label="Execute the ternary operator exercise and display results in browser console">
+                Run Exercise 1
+            </button>
+        </article>
+    </main>
+    <script src="02-ternary-operators.js"></script>
+</body>
+</html>
