@@ -21,32 +21,25 @@
     <main>
         <article>
             <h2 id="exercise-1-title">Exercise 1</h2>
-            <section aria-labelledby="function-section">
-                <h3 id="function-section">Function:</h3>
+            <section aria-labelledby="function-1-section">
+                <h3 id="function-1-section">Code:</h3>
                 <pre role="img" aria-label="JavaScript code showing callback function definition">
                     <code class="javascript-code" tabindex="0">
                         const procesar = (numero, callback) => {
                             callback(numero);
                         };
                         
-                        // Ejemplo de función callback
                         const duplicar = (num) => {
-                            console.log(`El doble de ${num} es ${num * 2}`);
+                            console.log(`The double of ${num} is ${num * 2}`);
                         };
                     </code>
                 </pre>
             </section>
-            <section aria-labelledby="usage-section">
-                <h3 id="usage-section">Example of usage:</h3>
+            <section aria-labelledby="usage-1-section">
+                <h3 id="usage-1-section">Example:</h3>
                 <pre role="img" aria-label="JavaScript code showing function usage and console output">
                     <code class="javascript-code" tabindex="0">
                         procesar(5, duplicar);
-                        // El doble de 5 es 10
-                        
-                        procesar(8, (num) => {
-                            console.log(`El cuadrado de ${num} es ${num * num}`);
-                        });
-                        // El cuadrado de 8 es 64
                     </code>
                 </pre>
             </section>
@@ -61,15 +54,14 @@
 
         <article>
             <h2 id="exercise-2-title">Exercise 2</h2>
-            <section aria-labelledby="function2-section">
-                <h3 id="function2-section">Function:</h3>
+            <section aria-labelledby="function-2-section">
+                <h3 id="function-2-section">Code:</h3>
                 <pre role="img" aria-label="JavaScript code showing calculator function with callbacks">
                     <code class="javascript-code" tabindex="0">
                         const calculadora = (num1, num2, callback) => {
                             return callback(num1, num2);
                         };
                         
-                        // Función callback para suma
                         const sumar = (a, b) => {
                             const resultado = a + b;
                             console.log(`${a} + ${b} = ${resultado}`);
@@ -78,19 +70,11 @@
                     </code>
                 </pre>
             </section>
-            <section aria-labelledby="usage2-section">
-                <h3 id="usage2-section">Example of usage:</h3>
+            <section aria-labelledby="usage-2-section">
+                <h3 id="usage-2-section">Example:</h3>
                 <pre role="img" aria-label="JavaScript code showing calculator function usage and console output">
                     <code class="javascript-code" tabindex="0">
                         calculadora(5, 3, sumar);
-                        // 5 + 3 = 8
-                        
-                        calculadora(10, 7, (a, b) => {
-                            const resultado = a - b;
-                            console.log(`${a} - ${b} = ${resultado}`);
-                            return resultado;
-                        });
-                        // 10 - 7 = 3
                     </code>
                 </pre>
             </section>
@@ -105,8 +89,8 @@
 
         <article>
             <h2 id="exercise-3-title">Exercise 3</h2>
-            <section aria-labelledby="function3-section">
-                <h3 id="function3-section">Function:</h3>
+            <section aria-labelledby="function-3-section">
+                <h3 id="function-3-section">Code:</h3>
                 <pre role="img" aria-label="JavaScript code showing asynchronous callback function">
                     <code class="javascript-code" tabindex="0">
                         const esperarISaludar = (nombre, callback) => {
@@ -115,24 +99,17 @@
                             }, 2000);
                         };
                         
-                        // Función callback para saludar
                         const saludarPersona = (nombre) => {
-                            console.log(`¡Hola, ${nombre}! Han pasado 2 segundos.`);
+                            console.log(`Hello, ${nombre}! 2 seconds have passed.`);
                         };
                     </code>
                 </pre>
             </section>
-            <section aria-labelledby="usage3-section">
-                <h3 id="usage3-section">Example of usage:</h3>
+            <section aria-labelledby="usage-3-section">
+                <h3 id="usage-3-section">Example:</h3>
                 <pre role="img" aria-label="JavaScript code showing asynchronous function usage and console output">
                     <code class="javascript-code" tabindex="0">
                         esperarISaludar('Ana', saludarPersona);
-                        // (Después de 2 segundos) ¡Hola, Ana! Han pasado 2 segundos.
-                        
-                        esperarISaludar('Carlos', (nombre) => {
-                            console.log(`Bienvenido, ${nombre}!`);
-                        });
-                        // (Después de 2 segundos) Bienvenido, Carlos!
                     </code>
                 </pre>
             </section>
@@ -147,8 +124,8 @@
 
         <article>
             <h2 id="exercise-4-title">Exercise 4</h2>
-            <section aria-labelledby="function4-section">
-                <h3 id="function4-section">Function:</h3>
+            <section aria-labelledby="function-4-section">
+                <h3 id="function-4-section">Code:</h3>
                 <pre role="img" aria-label="JavaScript code showing callback function with arrays">
                     <code class="javascript-code" tabindex="0">
                         const procesarElements = (array, callback) => {
@@ -156,30 +133,16 @@
                                 callback(array[i], i);
                             }
                         };
-                        
-                        // Función callback de ejemplo
-                        const mostrarElemento = (elemento, indice) => {
-                            console.log(`Índice ${indice}: ${elemento}`);
-                        };
                     </code>
                 </pre>
             </section>
-            <section aria-labelledby="usage4-section">
-                <h3 id="usage4-section">Example of usage:</h3>
+            <section aria-labelledby="usage-4-section">
+                <h3 id="usage-4-section">Example:</h3>
                 <pre role="img" aria-label="JavaScript code showing array callback function usage and console output">
                     <code class="javascript-code" tabindex="0">
-                        const frutas = ['manzana', 'banana', 'naranja'];
-                        procesarElements(frutas, mostrarElemento);
-                        // Índice 0: manzana
-                        // Índice 1: banana
-                        // Índice 2: naranja
-                        
                         procesarElements([1, 2, 3], (num) => {
-                            console.log(`El doble de ${num} es ${num * 2}`);
+                            console.log(`The double of ${num} is ${num * 2}`);
                         });
-                        // El doble de 1 es 2
-                        // El doble de 2 es 4
-                        // El doble de 3 es 6
                     </code>
                 </pre>
             </section>
@@ -194,33 +157,24 @@
 
         <article>
             <h2 id="exercise-5-title">Exercise 5</h2>
-            <section aria-labelledby="function5-section">
-                <h3 id="function5-section">Function:</h3>
+            <section aria-labelledby="function-5-section">
+                <h3 id="function-5-section">Code:</h3>
                 <pre role="img" aria-label="JavaScript code showing string processing callback function">
                     <code class="javascript-code" tabindex="0">
                         const procesarCadena = (cadena, callback) => {
                             const cadenaTransformada = cadena.toUpperCase();
                             callback(cadenaTransformada);
                         };
-                        
-                        // Función callback de ejemplo
-                        const mostrarCadena = (cadena) => {
-                            console.log(`Cadena transformada: ${cadena}`);
-                        };
                     </code>
                 </pre>
             </section>
-            <section aria-labelledby="usage5-section">
-                <h3 id="usage5-section">Example of usage:</h3>
+            <section aria-labelledby="usage-5-section">
+                <h3 id="usage-5-section">Example:</h3>
                 <pre role="img" aria-label="JavaScript code showing string callback function usage and console output">
                     <code class="javascript-code" tabindex="0">
-                        procesarCadena('hola mundo', mostrarCadena);
-                        // Cadena transformada: HOLA MUNDO
-                        
                         procesarCadena('javascript', (cadena) => {
-                            console.log(`La cadena "${cadena}" tiene ${cadena.length} caracteres`);
+                            console.log(`The string "${cadena}" has ${cadena.length} characters`);
                         });
-                        // La cadena "JAVASCRIPT" tiene 10 caracteres
                     </code>
                 </pre>
             </section>
