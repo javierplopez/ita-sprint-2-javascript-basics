@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JavaScript Promises and Async/Await exercise - Learn and practice asynchronous JavaScript with interactive examples">
+    <title>Promises & Async/Await - JavaScript Exercise 7</title>
+    <link rel="icon" type="image/x-icon" href="../src/img/javascript-logo.svg">
+    <link rel="stylesheet" href="../src/css/styles.css">
+</head>
+<body>
+    <header class="header-title">
+        <a href="../index.html" class="logo-link" aria-label="Return to main page - Basic JavaScript Exercises">
+            <img src="../src/img/javascript-logo.svg" alt="JavaScript Logo" class="js-logo">
+        </a>
+        <h1>7. Promises & Async/Await</h1>
+    </header>
+    <div class="console-notice" role="alert" aria-live="polite">
+        <p><span aria-hidden="true">⚠️</span> Important: Open the browser console to see the results</p>
+    </div>
+    <main>
+        <article>
+            <h2 id="exercise-1-title">Exercise 1</h2>
+            <section aria-labelledby="function-section">
+                <h3 id="function-section">Code:</h3>
+                <pre role="img" aria-label="JavaScript code showing Promise creation">
+                    <code class="javascript-code" tabindex="0">
+                        const myPromise = new Promise((resolve) => {
+                            setTimeout(() => {
+                                resolve('Hello, world');
+                            }, 2000);
+                        });
+                    </code>
+                </pre>
+            </section>
+            <section aria-labelledby="usage-section">
+                <h3 id="usage-section">Example:</h3>
+                <pre role="img" aria-label="JavaScript code showing Promise usage and console output">
+                    <code class="javascript-code" tabindex="0">
+                        myPromise.then(result => console.log(result));
+                    </code>
+                </pre>
+            </section>
+            <button 
+                id="run-exercise-1-btn" 
+                type="button"
+                aria-describedby="console-notice"
+                aria-label="Execute the Promise creation exercise and display results in browser console">
+                Run Exercise 1
+            </button>
+        </article>
+
+        <article>
+            <h2 id="exercise-2-title">Exercise 2</h2>
+            <section aria-labelledby="function-section-2">
+                <h3 id="function-section-2">Code:</h3>
+                <pre role="img" aria-label="JavaScript code showing Promise then usage">
+                    <code class="javascript-code" tabindex="0">
+                        myPromise
+                            .then(result => {
+                                console.log(result);
+                            });
+                    </code>
+                </pre>
+            </section>
+            <section aria-labelledby="usage-section-2">
+                <h3 id="usage-section-2">Example:</h3>
+                <pre role="img" aria-label="JavaScript code showing Promise then usage and console output">
+                    <code class="javascript-code" tabindex="0">
+                        myPromise.then(result => console.log(result));
+                    </code>
+                </pre>
+            </section>
+            <button 
+                id="run-exercise-2-btn" 
+                type="button"
+                aria-describedby="console-notice"
+                aria-label="Execute the Promise then exercise and display results in browser console">
+                Run Exercise 2
+            </button>
+        </article>
+
+        <article>
+            <h2 id="exercise-3-title">Exercise 3</h2>
+            <section aria-labelledby="function-section-3">
+                <h3 id="function-section-3">Code:</h3>
+                <pre role="img" aria-label="JavaScript code showing Promise with reject">
+                    <code class="javascript-code" tabindex="0">
+                        const conditionalPromise = (input) => {
+                            return new Promise((resolve, reject) => {
+                                setTimeout(() => {
+                                    if (input === 'Hello') {
+                                        resolve('Promise resolved');
+                                    } else {
+                                        reject('Promise rejected');
+                                    }
+                                }, 2000);
+                            });
+                        };
+                    </code>
+                </pre>
+            </section>
+            <section aria-labelledby="usage-section-3">
+                <h3 id="usage-section-3">Example:</h3>
+                <pre role="img" aria-label="JavaScript code showing Promise with reject usage and console output">
+                    <code class="javascript-code" tabindex="0">
+                        conditionalPromise('Hello').then(result => console.log(result)).catch(error => console.log(error));
+                        conditionalPromise('Goodbye').then(result => console.log(result)).catch(error => console.log(error));
+                    </code>
+                </pre>
+            </section>
+            <button 
+                id="run-exercise-3-btn" 
+                type="button"
+                aria-describedby="console-notice"
+                aria-label="Execute the Promise with reject exercise and display results in browser console">
+                Run Exercise 3
+            </button>
+        </article>
+
+        <article>
+            <h2 id="exercise-4-title">Exercise 4</h2>
+            <section aria-labelledby="function-section-4">
+                <h3 id="function-section-4">Code:</h3>
+                <pre role="img" aria-label="JavaScript code showing async/await usage">
+                    <code class="javascript-code" tabindex="0">
+                        async function executePromise() {
+                            const result = await myPromise;
+                            console.log(result);
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section aria-labelledby="usage-section-4">
+                <h3 id="usage-section-4">Example:</h3>
+                <pre role="img" aria-label="JavaScript code showing async/await usage and console output">
+                    <code class="javascript-code" tabindex="0">
+                        executePromise();
+                    </code>
+                </pre>
+            </section>
+            <button 
+                id="run-exercise-4-btn" 
+                type="button"
+                aria-describedby="console-notice"
+                aria-label="Execute the async/await exercise and display results in browser console">
+                Run Exercise 4
+            </button>
+        </article>
+
+        <article>
+            <h2 id="exercise-5-title">Exercise 5</h2>
+            <section aria-labelledby="function-section-5">
+                <h3 id="function-section-5">Code:</h3>
+                <pre role="img" aria-label="JavaScript code showing async/await with try/catch">
+                    <code class="javascript-code" tabindex="0">
+                        async function executePromiseWithErrors() {
+                            try {
+                                const result = await myPromise;
+                                console.log(result);
+                            } catch (error) {
+                                console.log('Error:', error);
+                            }
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section aria-labelledby="usage-section-5">
+                <h3 id="usage-section-5">Example:</h3>
+                <pre role="img" aria-label="JavaScript code showing async/await with try/catch usage and console output">
+                    <code class="javascript-code" tabindex="0">
+                        executePromiseWithErrors();
+                    </code>
+                </pre>
+            </section>
+            <button 
+                id="run-exercise-5-btn" 
+                type="button"
+                aria-describedby="console-notice"
+                aria-label="Execute the async/await with try/catch exercise and display results in browser console">
+                Run Exercise 5
+            </button>
+        </article>
+
+        <article>
+            <h2 id="exercise-6-title">Exercise 6</h2>
+            <section aria-labelledby="function-section-6">
+                <h3 id="function-section-6">Code:</h3>
+                <pre role="img" aria-label="JavaScript code showing Promise.all usage">
+                    <code class="javascript-code" tabindex="0">
+                        const promise1 = new Promise(resolve => setTimeout(() => resolve('Promise 1 resolved'), 2000));
+                        const promise2 = new Promise(resolve => setTimeout(() => resolve('Promise 2 resolved'), 3000));
+                        
+                        Promise.all([promise1, promise2])
+                            .then(results => console.log(results));
+                    </code>
+                </pre>
+            </section>
+            <section aria-labelledby="usage-section-6">
+                <h3 id="usage-section-6">Example:</h3>
+                <pre role="img" aria-label="JavaScript code showing Promise.all usage and console output">
+                    <code class="javascript-code" tabindex="0">
+                        Promise.all([promise1, promise2]).then(results => console.log(results));
+                    </code>
+                </pre>
+            </section>
+            <button 
+                id="run-exercise-6-btn" 
+                type="button"
+                aria-describedby="console-notice"
+                aria-label="Execute the Promise.all exercise and display results in browser console">
+                Run Exercise 6
+            </button>
+        </article>
+    </main>
+    <script src="07-promises-async-await.js"></script>
+</body>
+</html>
