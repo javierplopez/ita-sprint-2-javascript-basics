@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JavaScript Array Loops exercise - Learn and practice array looping methods with interactive examples">
+    <title>Array Loops - JavaScript Exercise 6</title>
+    <link rel="icon" type="image/x-icon" href="../src/img/javascript-logo.svg">
+    <link rel="stylesheet" href="../src/css/styles.css">
+</head>
+<body>
+    <header class="header-title">
+        <a href="../index.html" class="logo-link" aria-label="Return to main page - Basic JavaScript Exercises">
+            <img src="../src/img/javascript-logo.svg" alt="JavaScript Logo" class="js-logo">
+        </a>
+        <h1>6. Array Loops</h1>
+    </header>
+    <div class="console-notice" role="alert" aria-live="polite">
+        <p><span aria-hidden="true">⚠️</span> Important: Open the browser console to see the results</p>
+    </div>
+    <main>
+        <article>
+            <h2 id="exercise-1-title">Exercise 1</h2>
+            <section aria-labelledby="function-section">
+                <h3 id="function-section">Code:</h3>
+                <pre role="img" aria-label="JavaScript code showing forEach method usage">
+                    <code class="javascript-code" tabindex="0">
+                        let names = ['Anna', 'Bernat', 'Clara'];
+                        names.forEach(name => console.log(name));
+                    </code>
+                </pre>
+            </section>
+            <section aria-labelledby="usage-section">
+                <h3 id="usage-section">Example:</h3>
+                <pre role="img" aria-label="JavaScript code showing forEach method usage and console output">
+                    <code class="javascript-code" tabindex="0">
+                        names.forEach(name => console.log(name));
+                    </code>
+                </pre>
+            </section>
+            <button 
+                id="run-exercise-1-btn" 
+                type="button"
+                aria-describedby="console-notice"
+                aria-label="Execute the forEach method exercise and display results in browser console">
+                Run Exercise 1
+            </button>
+        </article>
+
+        <article>
+            <h2 id="exercise-2-title">Exercise 2</h2>
+            <section aria-labelledby="function-section-2">
+                <h3 id="function-section-2">Code:</h3>
+                <pre role="img" aria-label="JavaScript code showing for-of loop usage">
+                    <code class="javascript-code" tabindex="0">
+                        let namesLoop = ['Anna', 'Bernat', 'Clara'];
+                        for (const name of namesLoop) {
+                            console.log(name);
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section aria-labelledby="usage-section-2">
+                <h3 id="usage-section-2">Example:</h3>
+                <pre role="img" aria-label="JavaScript code showing for-of loop usage and console output">
+                    <code class="javascript-code" tabindex="0">
+                        for (const name of namesLoop) {
+                            console.log(name);
+                        }
+                    </code>
+                </pre>
+            </section>
+            <button 
+                id="run-exercise-2-btn" 
+                type="button"
+                aria-describedby="console-notice"
+                aria-label="Execute the for-of loop exercise and display results in browser console">
+                Run Exercise 2
+            </button>
+        </article>
+
+        <article>
+            <h2 id="exercise-3-title">Exercise 3</h2>
+            <section aria-labelledby="function-section-3">
+                <h3 id="function-section-3">Code:</h3>
+                <pre role="img" aria-label="JavaScript code showing filter method usage">
+                    <code class="javascript-code" tabindex="0">
+                        let numbers = [1, 2, 3, 4, 5, 6];
+                        let evens = numbers.filter(num => num % 2 === 0);
+                    </code>
+                </pre>
+            </section>
+            <section aria-labelledby="usage-section-3">
+                <h3 id="usage-section-3">Example:</h3>
+                <pre role="img" aria-label="JavaScript code showing filter method usage and console output">
+                    <code class="javascript-code" tabindex="0">
+                        console.log('Original array:', numbers);
+                        console.log('Even numbers:', evens);
+                    </code>
+                </pre>
+            </section>
+            <button 
+                id="run-exercise-3-btn" 
+                type="button"
+                aria-describedby="console-notice"
+                aria-label="Execute the filter method exercise and display results in browser console">
+                Run Exercise 3
+            </button>
+        </article>
+
+        <article>
+            <h2 id="exercise-4-title">Exercise 4</h2>
+            <section aria-labelledby="function-section-4">
+                <h3 id="function-section-4">Code:</h3>
+                <pre role="img" aria-label="JavaScript code showing for-in loop usage">
+                    <code class="javascript-code" tabindex="0">
+                        let obj = { name: 'Ola', age: 25, city: 'Barcelona' };
+                        for (const key in obj) {
+                            console.log(key + ': ' + obj[key]);
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section aria-labelledby="usage-section-4">
+                <h3 id="usage-section-4">Example:</h3>
+                <pre role="img" aria-label="JavaScript code showing for-in loop usage and console output">
+                    <code class="javascript-code" tabindex="0">
+                        for (const key in obj) {
+                            console.log(key + ': ' + obj[key]);
+                        }
+                    </code>
+                </pre>
+            </section>
+            <button 
+                id="run-exercise-4-btn" 
+                type="button"
+                aria-describedby="console-notice"
+                aria-label="Execute the for-in loop exercise and display results in browser console">
+                Run Exercise 4
+            </button>
+        </article>
+
+        <article>
+            <h2 id="exercise-5-title">Exercise 5</h2>
+            <section aria-labelledby="function-section-5">
+                <h3 id="function-section-5">Code:</h3>
+                <pre role="img" aria-label="JavaScript code showing for-of loop with break usage">
+                    <code class="javascript-code" tabindex="0">
+                        let numbersBreak = [1, 2, 3, 4, 5, 6];
+                        for (const num of numbersBreak) {
+                            if (num === 5) {
+                                break;
+                            }
+                            console.log(num);
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section aria-labelledby="usage-section-5">
+                <h3 id="usage-section-5">Example:</h3>
+                <pre role="img" aria-label="JavaScript code showing for-of loop with break usage and console output">
+                    <code class="javascript-code" tabindex="0">
+                        for (const num of numbersBreak) {
+                            if (num === 5) {
+                                break;
+                            }
+                            console.log(num);
+                        }
+                    </code>
+                </pre>
+            </section>
+            <button 
+                id="run-exercise-5-btn" 
+                type="button"
+                aria-describedby="console-notice"
+                aria-label="Execute the for-of loop with break exercise and display results in browser console">
+                Run Exercise 5
+            </button>
+        </article>
+
+        <article>
+            <h2 id="exercise-6-title">Exercise 6</h2>
+            <section aria-labelledby="function-section-6">
+                <h3 id="function-section-6">Code:</h3>
+                <pre role="img" aria-label="JavaScript code showing for-of loop with index usage">
+                    <code class="javascript-code" tabindex="0">
+                        let namesIndex = ['Anna', 'Bernat', 'Clara'];
+                        for (const [index, name] of namesIndex.entries()) {
+                            console.log(index + ': ' + name);
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section aria-labelledby="usage-section-6">
+                <h3 id="usage-section-6">Example:</h3>
+                <pre role="img" aria-label="JavaScript code showing for-of loop with index usage and console output">
+                    <code class="javascript-code" tabindex="0">
+                        for (const [index, name] of namesIndex.entries()) {
+                            console.log(index + ': ' + name);
+                        }
+                    </code>
+                </pre>
+            </section>
+            <button 
+                id="run-exercise-6-btn" 
+                type="button"
+                aria-describedby="console-notice"
+                aria-label="Execute the for-of loop with index exercise and display results in browser console">
+                Run Exercise 6
+            </button>
+        </article>      
+    </main>
+    <script src="06-array-loops.js"></script>
+</body>
+</html>
