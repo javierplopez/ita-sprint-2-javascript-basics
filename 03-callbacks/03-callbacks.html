@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JavaScript Callbacks exercise - Learn and practice callback function patterns with interactive examples">
+    <title>Callbacks - JavaScript Exercise 3</title>
+    <link rel="icon" type="image/x-icon" href="../src/img/javascript-logo.svg">
+    <link rel="stylesheet" href="../src/css/styles.css">
+</head>
+<body>
+    <header class="header-title">
+        <a href="../index.html" class="logo-link" aria-label="Return to main page - Basic JavaScript Exercises">
+            <img src="../src/img/javascript-logo.svg" alt="JavaScript Logo" class="js-logo">
+        </a>
+        <h1>3. Callbacks</h1>
+    </header>
+    <div class="console-notice" role="alert" aria-live="polite">
+        <p><span aria-hidden="true">⚠️</span> Important: Open the browser console to see the results</p>
+    </div>
+    <main>
+        <article>
+            <h2 id="exercise-1-title">Exercise 1</h2>
+            <section aria-labelledby="function-1-section">
+                <h3 id="function-1-section">Code:</h3>
+                <pre role="img" aria-label="JavaScript code showing callback function definition">
+                    <code class="javascript-code" tabindex="0">
+                        const process = (number, callback) => {
+                            callback(number);
+                        };
+                        
+                        const double = (num) => {
+                            console.log(`The double of ${num} is ${num * 2}`);
+                        };
+                    </code>
+                </pre>
+            </section>
+            <section aria-labelledby="usage-1-section">
+                <h3 id="usage-1-section">Example:</h3>
+                <pre role="img" aria-label="JavaScript code showing function usage and console output">
+                    <code class="javascript-code" tabindex="0">
+                        process(5, double);
+                    </code>
+                </pre>
+            </section>
+            <button 
+                id="run-exercise-1-btn" 
+                type="button"
+                aria-describedby="console-notice"
+                aria-label="Execute the callback function exercise and display results in browser console">
+                Run Exercise 1
+            </button>
+        </article>
+
+        <article>
+            <h2 id="exercise-2-title">Exercise 2</h2>
+            <section aria-labelledby="function-2-section">
+                <h3 id="function-2-section">Code:</h3>
+                <pre role="img" aria-label="JavaScript code showing calculator function with callbacks">
+                    <code class="javascript-code" tabindex="0">
+                        const calculator = (num1, num2, callback) => {
+                            return callback(num1, num2);
+                        };
+                        
+                        const add = (a, b) => {
+                            const result = a + b;
+                            console.log(`${a} + ${b} = ${result}`);
+                            return result;
+                        };
+                    </code>
+                </pre>
+            </section>
+            <section aria-labelledby="usage-2-section">
+                <h3 id="usage-2-section">Example:</h3>
+                <pre role="img" aria-label="JavaScript code showing calculator function usage and console output">
+                    <code class="javascript-code" tabindex="0">
+                        calculator(5, 3, add);
+                    </code>
+                </pre>
+            </section>
+            <button 
+                id="run-exercise-2-btn" 
+                type="button"
+                aria-describedby="console-notice"
+                aria-label="Execute the calculator callback exercise and display results in browser console">
+                Run Exercise 2
+            </button>
+        </article>
+
+        <article>
+            <h2 id="exercise-3-title">Exercise 3</h2>
+            <section aria-labelledby="function-3-section">
+                <h3 id="function-3-section">Code:</h3>
+                <pre role="img" aria-label="JavaScript code showing asynchronous callback function">
+                    <code class="javascript-code" tabindex="0">
+                        const waitAndGreet = (name, callback) => {
+                            setTimeout(() => {
+                                callback(name);
+                            }, 2000);
+                        };
+                        
+                        const greetPerson = (name) => {
+                            console.log(`Hello, ${name}! 2 seconds have passed.`);
+                        };
+                    </code>
+                </pre>
+            </section>
+            <section aria-labelledby="usage-3-section">
+                <h3 id="usage-3-section">Example:</h3>
+                <pre role="img" aria-label="JavaScript code showing asynchronous function usage and console output">
+                    <code class="javascript-code" tabindex="0">
+                        waitAndGreet('Ana', greetPerson);
+                    </code>
+                </pre>
+            </section>
+            <button 
+                id="run-exercise-3-btn" 
+                type="button"
+                aria-describedby="console-notice"
+                aria-label="Execute the asynchronous callback exercise and display results in browser console">
+                Run Exercise 3
+            </button>
+        </article>
+
+        <article>
+            <h2 id="exercise-4-title">Exercise 4</h2>
+            <section aria-labelledby="function-4-section">
+                <h3 id="function-4-section">Code:</h3>
+                <pre role="img" aria-label="JavaScript code showing callback function with arrays">
+                    <code class="javascript-code" tabindex="0">
+                        const processElements = (array, callback) => {
+                            for (let i = 0; i < array.length; i++) {
+                                callback(array[i], i);
+                            }
+                        };
+                    </code>
+                </pre>
+            </section>
+            <section aria-labelledby="usage-4-section">
+                <h3 id="usage-4-section">Example:</h3>
+                <pre role="img" aria-label="JavaScript code showing array callback function usage and console output">
+                    <code class="javascript-code" tabindex="0">
+                        processElements([1, 2, 3], (num) => {
+                            console.log(`The double of ${num} is ${num * 2}`);
+                        });
+                    </code>
+                </pre>
+            </section>
+            <button 
+                id="run-exercise-4-btn" 
+                type="button"
+                aria-describedby="console-notice"
+                aria-label="Execute the array callback exercise and display results in browser console">
+                Run Exercise 4
+            </button>
+        </article>
+
+        <article>
+            <h2 id="exercise-5-title">Exercise 5</h2>
+            <section aria-labelledby="function-5-section">
+                <h3 id="function-5-section">Code:</h3>
+                <pre role="img" aria-label="JavaScript code showing string processing callback function">
+                    <code class="javascript-code" tabindex="0">
+                        const processString = (string, callback) => {
+                            const transformedString = string.toUpperCase();
+                            callback(transformedString);
+                        };
+                    </code>
+                </pre>
+            </section>
+            <section aria-labelledby="usage-5-section">
+                <h3 id="usage-5-section">Example:</h3>
+                <pre role="img" aria-label="JavaScript code showing string callback function usage and console output">
+                    <code class="javascript-code" tabindex="0">
+                        processString('javascript', (string) => {
+                            console.log(`The string "${string}" has ${string.length} characters`);
+                        });
+                    </code>
+                </pre>
+            </section>
+            <button 
+                id="run-exercise-5-btn" 
+                type="button"
+                aria-describedby="console-notice"
+                aria-label="Execute the string processing callback exercise and display results in browser console">
+                Run Exercise 5
+            </button>
+        </article>
+
+    </main>
+    <script src="03-callbacks.js"></script>
+</body>
+</html>
