@@ -1,4 +1,4 @@
-# 📑 IT Academy - Sprint 2 - JavaScript Basics
+# 📑 IT Academy - Sprint 2.1 - JavaScript Basics
 
 JavaScript exercises collection developed as part of **IT Academy Sprint 2**, with the goal of practicing and mastering **modern JavaScript fundamentals and advanced concepts**.
 
