@@ -1,32 +1,21 @@
-/* Import Roboto font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-/* Basic reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-/* CSS Variables for consistency */
 :root {
-    /* Main colors */
     --primary-color: #f7df1e; /* JavaScript yellow */
     --secondary-color: #323330; /* JavaScript dark gray */
     --text-dark: #2c2c2c;
-    --text-light: #666;
     --background: #f8f9fa;
     --white: #ffffff;
     
-    /* Terminal/code colors - Enhanced for accessibility */
-    --terminal-bg: #1e1e1e; /* Dark terminal background */
-    --terminal-text: #e4e4e4; /* Terminal text - Enhanced contrast */
-    --terminal-border: #505050; /* Terminal border - Enhanced contrast */
-    --code-keyword: #6ba7f3; /* JS keywords - Enhanced contrast */
-    --code-string: #d19a66; /* Strings - Enhanced contrast */
-    --code-function: #e6db74; /* Function names - Enhanced contrast */
-    --code-comment: #7c9a65; /* Comments - Enhanced contrast */
-    --code-number: #c5d89b; /* Numbers - Enhanced contrast */
+    /* Enhanced for accessibility */
+    --terminal-bg: #1e1e1e;
+    --terminal-text: #e4e4e4;
+    --terminal-border: #505050;
     
     /* Buttons */
     --button-bg: linear-gradient(135deg, var(--primary-color) 0%, #f0d000 100%);
@@ -35,7 +24,6 @@
     --button-shadow: 0 4px 15px rgba(247, 223, 30, 0.3);
     --button-hover-shadow: 0 6px 20px rgba(247, 223, 30, 0.4);
     
-    /* Spacing and effects */
     --border-radius: 8px;
     --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
@@ -43,10 +31,8 @@
     --spacing-sm: 1rem;
     --spacing-md: 1.5rem;
     --spacing-lg: 2rem;
-    --spacing-xl: 3rem;
 }
 
-/* General styles */
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
@@ -72,7 +58,6 @@ body {
     border: 0 !important;
 }
 
-/* Header with logo and title */
 .header-title {
     display: flex;
     align-items: center;
@@ -118,7 +103,6 @@ body {
     50% { transform: translateY(-5px); }
 }
 
-/* Main title */
 h1 {
     font-size: 2.5rem;
     font-weight: 700;
@@ -140,7 +124,6 @@ h1::after {
     border-radius: 2px;
 }
 
-/* Navigation */
 nav {
     background: var(--white);
     border-radius: var(--border-radius);
@@ -204,7 +187,6 @@ nav a:active {
     transform: translateY(0);
 }
 
-/* Additional effects */
 nav a::after {
     content: '';
     position: absolute;
@@ -220,7 +202,6 @@ nav a:hover::after {
     left: 100%;
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
     body {
         padding: 1rem 0.5rem;
@@ -284,7 +265,6 @@ nav a:hover::after {
     }
 }
 
-/* Styles for exercise pages */
 main {
     max-width: 800px;
     width: 100%;
@@ -295,7 +275,6 @@ main {
     align-items: center;
 }
 
-/* Ensure centering for main page */
 main nav {
     max-width: 600px;
     width: 100%;
@@ -309,7 +288,6 @@ article {
     margin-bottom: var(--spacing-lg);
 }
 
-/* Important notice for console */
 .console-notice {
     background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
     color: #856404;
@@ -360,7 +338,6 @@ article {
     transition: var(--transition);
 }
 
-/* Styles to simulate terminal/code */
 pre {
     background: var(--terminal-bg);
     border: 2px solid var(--terminal-border);
@@ -411,49 +388,22 @@ pre::after {
     word-wrap: break-word;
 }
 
-/* Highlight JavaScript syntax */
-.javascript-code .keyword {
-    color: var(--code-keyword);
-    font-weight: 600;
-}
-
-.javascript-code .string {
-    color: var(--code-string);
-}
-
-.javascript-code .function {
-    color: var(--code-function);
-}
-
-.javascript-code .comment {
-    color: var(--code-comment);
-    font-style: italic;
-}
-
-.javascript-code .number {
-    color: var(--code-number);
-}
-
-/* Improve code accessibility */
 .javascript-code:focus {
     outline: 3px solid var(--primary-color);
     outline-offset: 2px;
     background: var(--terminal-bg);
 }
 
-/* Enhanced focus for keyboard navigation */
 *:focus {
     outline: 2px solid var(--primary-color);
     outline-offset: 2px;
 }
 
-/* Specific focus for links */
 a:focus {
     outline: 3px solid var(--primary-color);
     outline-offset: 3px;
 }
 
-/* Button styles */
 button {
     background: var(--button-bg);
     color: var(--button-text);
@@ -504,7 +454,6 @@ button:focus {
     box-shadow: var(--button-hover-shadow), 0 0 0 3px rgba(247, 223, 30, 0.3);
 }
 
-/* Exercise titles */
 h2 {
     color: var(--secondary-color);
     font-size: 1.5rem;
@@ -521,7 +470,6 @@ h3 {
     font-weight: 500;
 }
 
-/* Responsive for exercises */
 @media (max-width: 768px) {
     main {
         padding: var(--spacing-sm);
