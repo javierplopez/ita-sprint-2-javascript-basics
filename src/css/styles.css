@@ -1,41 +1,41 @@
-/* Importar fuente Roboto desde Google Fonts */
+/* Import Roboto font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-/* Reset básico */
+/* Basic reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Variables CSS para consistencia */
+/* CSS Variables for consistency */
 :root {
-    /* Colores principales */
-    --primary-color: #f7df1e; /* Amarillo JavaScript */
-    --secondary-color: #323330; /* Gris oscuro JavaScript */
+    /* Main colors */
+    --primary-color: #f7df1e; /* JavaScript yellow */
+    --secondary-color: #323330; /* JavaScript dark gray */
     --text-dark: #2c2c2c;
     --text-light: #666;
     --background: #f8f9fa;
     --white: #ffffff;
     
-    /* Colores para terminal/código - Mejorados para accesibilidad */
-    --terminal-bg: #1e1e1e; /* Fondo terminal oscuro */
-    --terminal-text: #e4e4e4; /* Texto terminal - Mejorado contraste */
-    --terminal-border: #505050; /* Borde terminal - Mejorado contraste */
-    --code-keyword: #6ba7f3; /* Palabras clave JS - Mejorado contraste */
-    --code-string: #d19a66; /* Strings - Mejorado contraste */
-    --code-function: #e6db74; /* Nombres de función - Mejorado contraste */
-    --code-comment: #7c9a65; /* Comentarios - Mejorado contraste */
-    --code-number: #c5d89b; /* Números - Mejorado contraste */
+    /* Terminal/code colors - Enhanced for accessibility */
+    --terminal-bg: #1e1e1e; /* Dark terminal background */
+    --terminal-text: #e4e4e4; /* Terminal text - Enhanced contrast */
+    --terminal-border: #505050; /* Terminal border - Enhanced contrast */
+    --code-keyword: #6ba7f3; /* JS keywords - Enhanced contrast */
+    --code-string: #d19a66; /* Strings - Enhanced contrast */
+    --code-function: #e6db74; /* Function names - Enhanced contrast */
+    --code-comment: #7c9a65; /* Comments - Enhanced contrast */
+    --code-number: #c5d89b; /* Numbers - Enhanced contrast */
     
-    /* Botones */
+    /* Buttons */
     --button-bg: linear-gradient(135deg, var(--primary-color) 0%, #f0d000 100%);
     --button-hover-bg: linear-gradient(135deg, #f0d000 0%, var(--primary-color) 100%);
     --button-text: var(--secondary-color);
     --button-shadow: 0 4px 15px rgba(247, 223, 30, 0.3);
     --button-hover-shadow: 0 6px 20px rgba(247, 223, 30, 0.4);
     
-    /* Espaciado y efectos */
+    /* Spacing and effects */
     --border-radius: 8px;
     --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
@@ -46,7 +46,7 @@
     --spacing-xl: 3rem;
 }
 
-/* Estilos generales */
+/* General styles */
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
@@ -59,7 +59,7 @@ body {
     padding: 2rem 1rem;
 }
 
-/* Clase para ocultar elementos visualmente pero mantenerlos accesibles para lectores de pantalla */
+/* Class to visually hide elements but keep them accessible to screen readers */
 .visually-hidden {
     position: absolute !important;
     width: 1px !important;
@@ -72,7 +72,7 @@ body {
     border: 0 !important;
 }
 
-/* Header con logo y título */
+/* Header with logo and title */
 .header-title {
     display: flex;
     align-items: center;
@@ -118,7 +118,7 @@ body {
     50% { transform: translateY(-5px); }
 }
 
-/* Título principal */
+/* Main title */
 h1 {
     font-size: 2.5rem;
     font-weight: 700;
@@ -140,7 +140,7 @@ h1::after {
     border-radius: 2px;
 }
 
-/* Navegación */
+/* Navigation */
 nav {
     background: var(--white);
     border-radius: var(--border-radius);
@@ -204,7 +204,7 @@ nav a:active {
     transform: translateY(0);
 }
 
-/* Efectos adicionales */
+/* Additional effects */
 nav a::after {
     content: '';
     position: absolute;
@@ -284,7 +284,7 @@ nav a:hover::after {
     }
 }
 
-/* Estilos para páginas de ejercicios */
+/* Styles for exercise pages */
 main {
     max-width: 800px;
     width: 100%;
@@ -295,7 +295,7 @@ main {
     align-items: center;
 }
 
-/* Asegurar centrado para la página principal */
+/* Ensure centering for main page */
 main nav {
     max-width: 600px;
     width: 100%;
@@ -309,7 +309,7 @@ article {
     margin-bottom: var(--spacing-lg);
 }
 
-/* Aviso importante para la consola */
+/* Important notice for console */
 .console-notice {
     background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
     color: #856404;
@@ -360,7 +360,7 @@ article {
     transition: var(--transition);
 }
 
-/* Estilos para simular terminal/código */
+/* Styles to simulate terminal/code */
 pre {
     background: var(--terminal-bg);
     border: 2px solid var(--terminal-border);
@@ -372,7 +372,7 @@ pre {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Simulación de barra de terminal */
+/* Terminal bar simulation */
 pre::before {
     content: '';
     position: absolute;
@@ -385,7 +385,7 @@ pre::before {
     border-bottom: 1px solid var(--terminal-border);
 }
 
-/* Botones de terminal (rojo, amarillo, verde) */
+/* Terminal buttons (red, yellow, green) */
 pre::after {
     content: '';
     position: absolute;
@@ -411,7 +411,7 @@ pre::after {
     word-wrap: break-word;
 }
 
-/* Destacar sintaxis JavaScript */
+/* Highlight JavaScript syntax */
 .javascript-code .keyword {
     color: var(--code-keyword);
     font-weight: 600;
@@ -434,26 +434,26 @@ pre::after {
     color: var(--code-number);
 }
 
-/* Mejorar accesibilidad del código */
+/* Improve code accessibility */
 .javascript-code:focus {
     outline: 3px solid var(--primary-color);
     outline-offset: 2px;
     background: var(--terminal-bg);
 }
 
-/* Focus mejorado para navegación por teclado */
+/* Enhanced focus for keyboard navigation */
 *:focus {
     outline: 2px solid var(--primary-color);
     outline-offset: 2px;
 }
 
-/* Focus específico para enlaces */
+/* Specific focus for links */
 a:focus {
     outline: 3px solid var(--primary-color);
     outline-offset: 3px;
 }
 
-/* Estilos para botones */
+/* Button styles */
 button {
     background: var(--button-bg);
     color: var(--button-text);
@@ -504,7 +504,7 @@ button:focus {
     box-shadow: var(--button-hover-shadow), 0 0 0 3px rgba(247, 223, 30, 0.3);
 }
 
-/* Títulos de ejercicios */
+/* Exercise titles */
 h2 {
     color: var(--secondary-color);
     font-size: 1.5rem;
@@ -521,7 +521,7 @@ h3 {
     font-weight: 500;
 }
 
-/* Responsive para ejercicios */
+/* Responsive for exercises */
 @media (max-width: 768px) {
     main {
         padding: var(--spacing-sm);
