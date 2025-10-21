@@ -286,6 +286,8 @@ article {
     box-shadow: var(--shadow);
     padding: var(--spacing-lg);
     margin-bottom: var(--spacing-lg);
+    width: 100%;
+    max-width: 800px;
 }
 
 .console-notice {
