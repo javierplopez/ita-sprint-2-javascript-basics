@@ -1,6 +1,5 @@
 // Exercise 1
 const numbers = [1, 2, 3, 4];
-// Using map to create array with squares
 const squares = numbers.map(num => num * num);
 
 // HTML part to test
@@ -12,7 +11,6 @@ exercise1Test.addEventListener('click', () => {
 });
 
 // Exercise 2
-// Using filter to get only even numbers
 const evens = numbers.filter(num => num % 2 === 0);
 
 // HTML part to test
@@ -25,7 +23,6 @@ exercise2Test.addEventListener('click', () => {
 
 // Exercise 3
 const findNumbers = [1, 10, 8, 11];
-// Using find to get the first number greater than 10
 const greaterThan10 = findNumbers.find(num => num > 10);
 
 // HTML part to test
@@ -38,7 +35,6 @@ exercise3Test.addEventListener('click', () => {
 
 // Exercise 4
 const reduceNumbers = [13, 7, 8, 21];
-// Using reduce to calculate the total sum
 const totalSum = reduceNumbers.reduce((accumulator, num) => accumulator + num, 0);
 
 // HTML part to test
@@ -51,7 +47,6 @@ exercise4Test.addEventListener('click', () => {
 
 // Exercise 5
 const combinedNumbers = [1, 3, 7, 10, 15, 17, 11, 5, 8, 12, 9];
-// One-line function: filter + map + reduce
 const result = combinedNumbers.filter(num => num >= 10).map(num => num * 2).reduce((acc, num) => acc + num, 0);
 
 // HTML part to test
@@ -64,9 +59,7 @@ exercise5Test.addEventListener('click', () => {
 
 // Exercise 6
 const everyNumbers = [11, 12, 13, 14];
-// Using every to check if all elements meet the condition
 const allGreaterThan10 = everyNumbers.every(num => num > 10);
-// Using some to check if at least one meets the condition
 const someGreaterThan10 = everyNumbers.some(num => num > 10);
 
 // HTML part to test

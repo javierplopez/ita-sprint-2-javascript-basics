@@ -15,7 +15,7 @@ exercise1Test.addEventListener('click', () => {
 });
 
 // Exercise 2
-const suma = (...numbers) => {
+const sum = (...numbers) => {
     return numbers.reduce((total, num) => total + num, 0);
 };
 
@@ -23,8 +23,8 @@ const suma = (...numbers) => {
 const exercise2Test = document.getElementById('run-exercise-2-btn');
 exercise2Test.addEventListener('click', () => {
     
-    console.log(suma(1, 2, 3));
-    console.log(suma(10, 20, 30, 40));
+    console.log(sum(1, 2, 3));
+    console.log(sum(10, 20, 30, 40));
 });
 
 // Exercise 3

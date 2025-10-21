@@ -14,7 +14,6 @@ exercise1Test.addEventListener('click', () => {
 });
 
 // Exercise 2
-// HTML part to test
 const exercise2Test = document.getElementById('run-exercise-2-btn');
 exercise2Test.addEventListener('click', () => {
     
