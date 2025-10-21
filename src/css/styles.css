@@ -12,12 +12,10 @@
     --background: #f8f9fa;
     --white: #ffffff;
     
-    /* Enhanced for accessibility */
     --terminal-bg: #1e1e1e;
     --terminal-text: #e4e4e4;
     --terminal-border: #505050;
     
-    /* Buttons */
     --button-bg: linear-gradient(135deg, var(--primary-color) 0%, #f0d000 100%);
     --button-hover-bg: linear-gradient(135deg, #f0d000 0%, var(--primary-color) 100%);
     --button-text: var(--secondary-color);
@@ -31,8 +29,6 @@
     --spacing-sm: 1rem;
     --spacing-md: 1.5rem;
     --spacing-lg: 2rem;
-    
-    /* Common colors */
     --js-yellow: #f7df1e;
     --js-hover-bg: rgba(247, 223, 30, 0.1);
 }
@@ -465,7 +461,6 @@ h3 {
     font-weight: 500;
 }
 
-/* Fixed home button */
 .home-button {
     position: fixed;
     bottom: 2rem;
