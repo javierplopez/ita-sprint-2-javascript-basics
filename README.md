@@ -30,8 +30,6 @@ The project consists of **progressive exercises** designed to strengthen underst
 
 ## 🛠️ Technologies
 - **JavaScript (ES6+)**
-- **Modern Browser APIs**
-- **Async/Await Patterns**
 
 ---
 
