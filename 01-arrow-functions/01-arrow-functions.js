@@ -47,8 +47,8 @@ const printNumbers = (numbers) => {
 // HTML part to test
 const exercise4Test = document.getElementById('run-exercise-4-btn');
 exercise4Test.addEventListener('click', () => {
-    const numbersArray = [1, 2, 3, 4, 5];
-    printNumbers(numbersArray);
+    const numbers = [1, 2, 3, 4, 5];
+    printNumbers(numbers);
 });
 
 // Exercise 5

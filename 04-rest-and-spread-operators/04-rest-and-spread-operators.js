@@ -1,17 +1,16 @@
 // Exercise 1
-const array1 = [1, 2, 3];
-const array2 = [4, 5, 6];
+const firstNumbers = [1, 2, 3];
+const secondNumbers = [4, 5, 6];
 
-// Using spread operator to combine arrays
-const array3 = [...array1, ...array2];
+const combinedNumbers = [...firstNumbers, ...secondNumbers];
 
 // HTML part to test
 const exercise1Test = document.getElementById('run-exercise-1-btn');
 exercise1Test.addEventListener('click', () => {
     
-    console.log('Array 1:', array1);
-    console.log('Array 2:', array2);
-    console.log('Array 3 (combined):', array3);
+    console.log('First numbers:', firstNumbers);
+    console.log('Second numbers:', secondNumbers);
+    console.log('Combined numbers:', combinedNumbers);
 });
 
 // Exercise 2
@@ -34,10 +33,8 @@ const object1 = {
     city: 'Madrid'
 };
 
-// Copying object with spread
 const object2 = { ...object1 };
 
-// Modifying object2
 object2.age = 30;
 object2.profession = 'Developer';
 
@@ -53,7 +50,6 @@ exercise3Test.addEventListener('click', () => {
 // Exercise 4
 const colors = ['red', 'green', 'blue', 'yellow', 'orange', 'purple'];
 
-// Destructuring with rest operator
 const [first, second, ...rest] = colors;
 
 // HTML part to test
@@ -92,7 +88,6 @@ const objectB = {
     active: true
 };
 
-// Merging objects with spread
 const mergedObject = { ...objectA, ...objectB };
 
 // HTML part to test
