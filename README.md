@@ -28,6 +28,14 @@ The project consists of **progressive exercises** designed to strengthen underst
 
 ---
 
+### 🚀 How to Run
+1. Open `index.html` in your browser to access all exercises
+2. Or open individual exercise HTML files directly
+3. Use browser Developer Tools (F12) to see console output
+4. Click "Run Exercise" buttons to test functionality
+
+---
+
 ## 🛠️ Technologies
 - **JavaScript (ES6+)**
 
@@ -40,3 +48,4 @@ Clone the repository and navigate into the project folder:
 ```bash
 git clone https://github.com/javierplopez/ita-sprint-2-javascript-basics.git
 cd ita-sprint-2-javascript-basics
+```
