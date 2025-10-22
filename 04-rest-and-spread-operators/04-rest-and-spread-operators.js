@@ -27,24 +27,24 @@ exercise2Test.addEventListener('click', () => {
 });
 
 // Exercise 3
-const object1 = {
+const originalPerson = {
     name: 'Ana',
     age: 25,
     city: 'Madrid'
 };
 
-const object2 = { ...object1 };
+const updatedPerson = { ...originalPerson };
 
-object2.age = 30;
-object2.profession = 'Developer';
+updatedPerson.age = 30;
+updatedPerson.profession = 'Developer';
 
 // HTML part to test
 const exercise3Test = document.getElementById('run-exercise-3-btn');
 exercise3Test.addEventListener('click', () => {
     
-    console.log('Object 1:', object1);
-    console.log('Object 2:', object2);
-    console.log('Are they the same object?', object1 === object2);
+    console.log('Original person:', originalPerson);
+    console.log('Updated person:', updatedPerson);
+    console.log('Are they the same object?', originalPerson === updatedPerson);
 });
 
 // Exercise 4
@@ -76,23 +76,23 @@ exercise5Test.addEventListener('click', () => {
 });
 
 // Exercise 6
-const objectA = {
+const basicInfo = {
     name: 'Carlos',
     age: 30,
     city: 'Madrid'
 };
 
-const objectB = {
+const professionalInfo = {
     profession: 'Developer',
     email: 'carlos@email.com',
     active: true
 };
 
-const mergedObject = { ...objectA, ...objectB };
+const completeProfile = { ...basicInfo, ...professionalInfo };
 
 // HTML part to test
 const exercise6Test = document.getElementById('run-exercise-6-btn');
 exercise6Test.addEventListener('click', () => {
     console.log('Using spread to merge multiple objects:');
-    console.log(mergedObject);
+    console.log(completeProfile);
 });
