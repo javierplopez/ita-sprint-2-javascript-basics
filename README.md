@@ -38,6 +38,8 @@ The project consists of **progressive exercises** designed to strengthen underst
 
 ## 🛠️ Technologies
 - **JavaScript**
+- **CSS3**
+- **HTML5**
 
 ---
 
