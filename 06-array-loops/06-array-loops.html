@@ -25,7 +25,7 @@
                 <h3 id="function-section">Code:</h3>
                 <pre role="img" aria-label="JavaScript code showing forEach method usage">
                     <code class="javascript-code" tabindex="0">
-                        let names = ['Anna', 'Bernat', 'Clara'];
+                        const names = ['Anna', 'Bernat', 'Clara'];
                         names.forEach(name => console.log(name));
                     </code>
                 </pre>
@@ -53,7 +53,7 @@
                 <h3 id="function-section-2">Code:</h3>
                 <pre role="img" aria-label="JavaScript code showing for-of loop usage">
                     <code class="javascript-code" tabindex="0">
-                        let namesLoop = ['Anna', 'Bernat', 'Clara'];
+                        const namesLoop = ['Anna', 'Bernat', 'Clara'];
                         for (const name of namesLoop) {
                             console.log(name);
                         }
@@ -85,8 +85,8 @@
                 <h3 id="function-section-3">Code:</h3>
                 <pre role="img" aria-label="JavaScript code showing filter method usage">
                     <code class="javascript-code" tabindex="0">
-                        let numbers = [1, 2, 3, 4, 5, 6];
-                        let evens = numbers.filter(num => num % 2 === 0);
+                        const numbers = [1, 2, 3, 4, 5, 6];
+                        const evens = numbers.filter(num => num % 2 === 0);
                     </code>
                 </pre>
             </section>
@@ -114,7 +114,7 @@
                 <h3 id="function-section-4">Code:</h3>
                 <pre role="img" aria-label="JavaScript code showing for-in loop usage">
                     <code class="javascript-code" tabindex="0">
-                        let obj = { name: 'Ola', age: 25, city: 'Barcelona' };
+                        const obj = { name: 'Ola', age: 25, city: 'Barcelona' };
                         for (const key in obj) {
                             console.log(key + ': ' + obj[key]);
                         }
@@ -146,7 +146,7 @@
                 <h3 id="function-section-5">Code:</h3>
                 <pre role="img" aria-label="JavaScript code showing for-of loop with break usage">
                     <code class="javascript-code" tabindex="0">
-                        let numbersBreak = [1, 2, 3, 4, 5, 6];
+                        const numbersBreak = [1, 2, 3, 4, 5, 6];
                         for (const num of numbersBreak) {
                             if (num === 5) {
                                 break;
@@ -184,7 +184,7 @@
                 <h3 id="function-section-6">Code:</h3>
                 <pre role="img" aria-label="JavaScript code showing for-of loop with index usage">
                     <code class="javascript-code" tabindex="0">
-                        let namesIndex = ['Anna', 'Bernat', 'Clara'];
+                        const namesIndex = ['Anna', 'Bernat', 'Clara'];
                         for (const [index, name] of namesIndex.entries()) {
                             console.log(index + ': ' + name);
                         }

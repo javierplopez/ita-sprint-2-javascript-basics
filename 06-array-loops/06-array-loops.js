@@ -1,5 +1,5 @@
 // Exercise 1
-let names = ['Anna', 'Bernat', 'Clara'];
+const names = ['Anna', 'Bernat', 'Clara'];
 
 // HTML part to test
 const exercise1Test = document.getElementById('run-exercise-1-btn');
@@ -9,7 +9,7 @@ exercise1Test.addEventListener('click', () => {
 });
 
 // Exercise 2
-let namesLoop = ['Anna', 'Bernat', 'Clara'];
+const namesLoop = ['Anna', 'Bernat', 'Clara'];
 
 // HTML part to test
 const exercise2Test = document.getElementById('run-exercise-2-btn');
@@ -21,8 +21,8 @@ exercise2Test.addEventListener('click', () => {
 });
 
 // Exercise 3
-let numbers = [1, 2, 3, 4, 5, 6];
-let evens = numbers.filter(num => num % 2 === 0);
+const numbers = [1, 2, 3, 4, 5, 6];
+const evens = numbers.filter(num => num % 2 === 0);
 
 // HTML part to test
 const exercise3Test = document.getElementById('run-exercise-3-btn');
@@ -33,7 +33,7 @@ exercise3Test.addEventListener('click', () => {
 });
 
 // Exercise 4
-let obj = { name: 'Ola', age: 25, city: 'Barcelona' };
+const obj = { name: 'Ola', age: 25, city: 'Barcelona' };
 
 // HTML part to test
 const exercise4Test = document.getElementById('run-exercise-4-btn');
@@ -45,7 +45,7 @@ exercise4Test.addEventListener('click', () => {
 });
 
 // Exercise 5
-let numbersBreak = [1, 2, 3, 4, 5, 6];
+const numbersBreak = [1, 2, 3, 4, 5, 6];
 
 // HTML part to test
 const exercise5Test = document.getElementById('run-exercise-5-btn');
@@ -60,7 +60,7 @@ exercise5Test.addEventListener('click', () => {
 });
 
 // Exercise 6
-let namesIndex = ['Anna', 'Bernat', 'Clara'];
+const namesIndex = ['Anna', 'Bernat', 'Clara'];
 
 // HTML part to test
 const exercise6Test = document.getElementById('run-exercise-6-btn');
