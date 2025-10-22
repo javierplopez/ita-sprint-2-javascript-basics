@@ -47,14 +47,14 @@ exercise4Test.addEventListener('click', () => {
 
 // Exercise 5
 const combinedNumbers = [1, 3, 7, 10, 15, 17, 11, 5, 8, 12, 9];
-const result = combinedNumbers.filter(num => num >= 10).map(num => num * 2).reduce((acc, num) => acc + num, 0);
+const sumOfDoubledLargeNumbers = combinedNumbers.filter(num => num >= 10).map(num => num * 2).reduce((acc, num) => acc + num, 0);
 
 // HTML part to test
 const exercise5Test = document.getElementById('run-exercise-5-btn');
 exercise5Test.addEventListener('click', () => {
     
     console.log('Original array:', combinedNumbers);
-    console.log('Result:', result);
+    console.log('Sum of doubled large numbers:', sumOfDoubledLargeNumbers);
 });
 
 // Exercise 6

@@ -33,14 +33,14 @@ exercise3Test.addEventListener('click', () => {
 });
 
 // Exercise 4
-const obj = { name: 'Ola', age: 25, city: 'Barcelona' };
+const person = { name: 'Ola', age: 25, city: 'Barcelona' };
 
 // HTML part to test
 const exercise4Test = document.getElementById('run-exercise-4-btn');
 exercise4Test.addEventListener('click', () => {
     
-    for (const key in obj) {
-        console.log(key + ': ' + obj[key]);
+    for (const key in person) {
+        console.log(key + ': ' + person[key]);
     }
 });
 
